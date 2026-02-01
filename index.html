@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Capabilities in Action - Agentic Systems + Commercial Expertise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <style>
+        :root {
+            /* Furthr Brand Colors */
+            --furthr-primary: #6366F1;
+            --furthr-primary-dark: #4F46E5;
+            --furthr-secondary: #8B5CF6;
+            --furthr-accent: #EC4899;
+            --furthr-navy: #1E293B;
+            --furthr-dark: #0F172A;
+            --furthr-grey: #64748B;
+            --furthr-light-grey: #E2E8F0;
+            --furthr-off-white: #F8FAFC;
+            --furthr-white: #FFFFFF;
+            --furthr-green: #10B981;
+            --furthr-blue: #3B82F6;
+            --furthr-red: #EF4444;
+            --furthr-orange: #F97316;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--furthr-off-white);
+        }
+
+        .reveal {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--furthr-off-white);
+        }
+
+        .reveal .slides section {
+            padding: 40px 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-align: center !important;
+        }
+
+        .reveal h1 {
+            color: var(--furthr-navy);
+            font-size: 2.3em;
+            margin-bottom: 0.3em;
+            line-height: 1.2;
+        }
+
+        .reveal h2 {
+            color: var(--furthr-primary);
+            font-size: 1.5em;
+            margin-bottom: 0.3em;
+        }
+
+        .reveal h3 {
+            color: var(--furthr-navy);
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .reveal h4 {
+            color: var(--furthr-navy);
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .reveal p {
+            color: var(--furthr-navy);
+            line-height: 1.6;
+            font-size: 0.85em;
+            text-align: center;
+        }
+
+        .reveal ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .reveal ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 28px;
+            font-size: 0.8em;
+            line-height: 1.4;
+        }
+
+        .reveal ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: var(--furthr-primary);
+            border-radius: 50%;
+        }
+
+        /* Centered containers */
+        .center-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--furthr-primary) 0%, var(--furthr-primary-dark) 100%);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.65em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .badge.green {
+            background: linear-gradient(135deg, var(--furthr-green) 0%, #059669 100%);
+        }
+
+        .badge.blue {
+            background: linear-gradient(135deg, var(--furthr-blue) 0%, #2563EB 100%);
+        }
+
+        .badge.red {
+            background: linear-gradient(135deg, var(--furthr-red) 0%, #DC2626 100%);
+        }
+
+        .badge.orange {
+            background: linear-gradient(135deg, var(--furthr-orange) 0%, #EA580C 100%);
+        }
+
+        .badge.purple {
+            background: linear-gradient(135deg, var(--furthr-secondary) 0%, #7C3AED 100%);
+        }
+
+        /* Accent Bar */
+        .accent-bar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--furthr-primary) 0%, var(--furthr-secondary) 100%);
+            margin: 15px auto 20px;
+            width: 80px;
+            border-radius: 2px;
+        }
+
+        /* Stat Grid */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 25px auto;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .stat-grid.two {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 750px;
+        }
+
+        .stat-grid.four {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 1100px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 22px 18px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--furthr-light-grey);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-box .value {
+            font-size: 2.2em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--furthr-primary) 0%, var(--furthr-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-box .label {
+            font-size: 0.75em;
+            color: var(--furthr-grey);
+            font-weight: 500;
+        }
+
+        /* Feature Card */
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid var(--furthr-light-grey);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            margin: 12px 0;
+        }
+
+        .feature-card h3 {
+            color: var(--furthr-primary);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-align: left !important;
+        }
+
+        .feature-card p {
+            font-size: 0.75em;
+            color: var(--furthr-grey);
+            margin: 0;
+            text-align: left !important;
+        }
+
+        /* Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 950px;
+            margin: 20px auto;
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--furthr-dark);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-container.highlight {
+            border: 4px solid var(--furthr-primary);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.5), 0 10px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+
+        .video-caption {
+            text-align: center;
+            font-size: 0.75em;
+            color: var(--furthr-grey);
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .video-grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--furthr-dark);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            aspect-ratio: 16/9;
+        }
+
+        .video-grid-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-grid-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            font-size: 0.6em;
+            padding: 8px 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Capability Icon Grid */
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            max-width: 950px;
+            margin: 25px auto;
+        }
+
+        .capability-item {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            border-left: 4px solid var(--furthr-primary);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .capability-item h4 {
+            color: var(--furthr-navy);
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            text-align: left !important;
+        }
+
+        .capability-item p {
+            font-size: 0.7em;
+            color: var(--furthr-grey);
+            margin: 0;
+            text-align: left !important;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 0.95em;
+            color: var(--furthr-grey);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        /* Context Card */
+        .context-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.06) 100%);
+            border-left: 4px solid var(--furthr-primary);
+            padding: 25px 28px;
+            border-radius: 14px;
+            max-width: 850px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .context-card h3 {
+            text-align: left !important;
+            color: var(--furthr-primary);
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+
+        .context-card p {
+            font-size: 0.75em;
+            margin: 6px 0;
+            color: var(--furthr-navy);
+            text-align: left !important;
+        }
+
+        .context-card .highlight {
+            color: var(--furthr-primary);
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .skills-category {
+            margin-bottom: 25px;
+        }
+
+        .skills-category h4 {
+            color: var(--furthr-primary);
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            text-align: left !important;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid var(--furthr-light-grey);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            color: var(--furthr-navy);
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Intersection Diagram */
+        .intersection-diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .intersection-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .intersection-circle.agentic {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0.08) 100%);
+            border: 3px solid var(--furthr-primary);
+        }
+
+        .intersection-circle.commercial {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.08) 100%);
+            border: 3px solid var(--furthr-secondary);
+        }
+
+        .intersection-circle h4 {
+            font-size: 0.85em;
+            margin: 0;
+            color: var(--furthr-navy);
+        }
+
+        .intersection-circle p {
+            font-size: 0.65em;
+            margin: 5px 0 0 0;
+        }
+
+        .intersection-plus {
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--furthr-primary) 0%, var(--furthr-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid var(--furthr-light-grey);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            max-width: 650px;
+            margin: 25px auto;
+        }
+
+        .contact-section p {
+            font-size: 0.8em;
+            margin: 10px 0;
+        }
+
+        .contact-section .email {
+            color: var(--furthr-primary);
+            font-weight: 600;
+        }
+
+        /* Checklist */
+        .checklist {
+            text-align: left;
+            max-width: 750px;
+            margin: 20px auto;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 0.8em;
+            color: var(--furthr-navy);
+        }
+
+        .checklist-item .check {
+            color: var(--furthr-green);
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 1.1em;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+            border: 2px solid var(--furthr-primary);
+            border-radius: 16px;
+            padding: 25px 30px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .highlight-box p {
+            font-size: 0.8em;
+            margin: 8px 0;
+            color: var(--furthr-navy);
+        }
+
+        .highlight-box strong {
+            color: var(--furthr-primary);
+        }
+
+        /* Slide Numbers */
+        .reveal .slide-number {
+            font-size: 0.6em;
+            color: #000000;
+            background: transparent;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .reveal .slides section {
+                padding: 20px 30px;
+            }
+
+            .stat-grid,
+            .stat-grid.two,
+            .stat-grid.four {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intersection-diagram {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .intersection-circle {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">Portfolio Showcase</span>
+                    <h1>Capabilities in Action</h1>
+                    <h2>Agentic Systems + Commercial Expertise</h2>
+                    <div class="accent-bar"></div>
+                    <p class="subtitle">Live demonstrations from real production systems</p>
+                </div>
+            </section>
+
+            <!-- Slide 2: The Intersection -->
+            <section>
+                <div class="center-container">
+                    <span class="badge purple">The Sweet Spot</span>
+                    <h2>What Makes This Different</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="intersection-diagram">
+                        <div class="intersection-circle agentic">
+                            <h4>Agentic AI</h4>
+                            <p>Autonomous systems<br>Context-aware agents<br>Real-time execution</p>
+                        </div>
+                        <div class="intersection-plus">+</div>
+                        <div class="intersection-circle commercial">
+                            <h4>Commercial</h4>
+                            <p>Business strategy<br>Domain expertise<br>Real-world impact</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <p><strong>The Intersection:</strong> Not just building AI systems but solving real business
+                            problems with AI that delivers measurable outcomes.</p>
+                        <p style="margin-top: 15px;"><strong>Result:</strong> Systems that don't just work. They drive
+                            revenue, reduce costs, and transform operations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Core Skills & Background -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Background</span>
+                    <h2>Core Skills & Expertise</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="skills-container">
+
+                        <div class="skills-category">
+                            <h4>Commercial & Business</h4>
+                            <div class="skills-list">
+                                <span class="skill-tag">Financial Modelling</span>
+                                <span class="skill-tag">Treasury Management</span>
+                                <span class="skill-tag">Product Strategy</span>
+                                <span class="skill-tag">Go-to-Market</span>
+                                <span class="skill-tag">Stakeholder Management</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4>Technical AI & Engineering</h4>
+                            <div class="skills-list">
+                                <span class="skill-tag">Agentic AI Systems</span>
+                                <span class="skill-tag">LLM Integration</span>
+                                <span class="skill-tag">Workflow Automation</span>
+                                <span class="skill-tag">Financial Modelling</span>
+                                <span class="skill-tag">POC Development</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4>Track Record</h4>
+                            <div class="skills-list">
+                                <span class="skill-tag">$10M+ ARR Fund Platform</span>
+                                <span class="skill-tag">Superannuation Tech</span>
+                                <span class="skill-tag">Stablecoin Infrastructure</span>
+                                <span class="skill-tag">RFP Automation (40hr → 10min)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 20px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
+                        CV has full history. This demonstrates capabilities in action.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 4: What You're About to See -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">Overview</span>
+                    <h2>What You're About to See</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="stat-grid two" style="margin-top: 30px;">
+                        <div class="stat-box">
+                            <h3 style="color: var(--furthr-primary);">Simple Super</h3>
+                            <p style="margin-top: 18px; font-size: 0.75em;">
+                                <strong>Superannuation Platform</strong><br><br>
+                                Interactive AI Wizard<br>
+                                Autonomous Agents<br>
+                                Complete workflow in 2 minutes
+                            </p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 style="color: var(--furthr-secondary);">Chartis</h3>
+                            <p style="margin-top: 18px; font-size: 0.75em;">
+                                <strong>UGC Gaming Platform</strong><br><br>
+                                Individual Deal Modelling<br>
+                                Portfolio Consolidation<br>
+                                Distribution Waterfall
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="context-card" style="margin-top: 30px;">
+                        <h3>What Makes This Different</h3>
+                        <p>These are <span class="highlight">live production systems</span> with agents
+                            working in real-time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Agentic Capabilities Overview -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Capabilities</span>
+                    <h2>What These Videos Demonstrate</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="capability-grid">
+                        <div class="capability-item">
+                            <h4>AI Wizard</h4>
+                            <p>Contextual understanding of investment needs. Guides through setups.
+                                Reduces onboarding friction.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h4>Autonomous Agents</h4>
+                            <p>Execute tasks on user's behalf. Drift management, trade execution. Self-directed with
+                                approve parameters,
+                                minimal human intervention.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h4>Financial Modelling Platform</h4>
+                            <p>Investment-grade modelling. Real-time portfolio consolidation. Automated
+                                waterfall calculations.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h4>Production Systems</h4>
+                            <p>These are <strong>production systems</strong> solving real business
+                                problems for real clients.</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 6px; font-style: italic;">The following videos are captured by Browser Agents
+                    </p>
+
+                </div>
+            </section>
+
+            <!-- Slide 6: Case Study 1 - Simple Super Context -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Case Study 1</span>
+                    <h2>Simple Super</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="context-card">
+                        <h3>Platform Overview</h3>
+                        <p><strong>What:</strong> Superannuation management platform</p>
+                        <p style="margin-top: 15px;"><strong>You'll See:</strong></p>
+                        <p>✓ AI Wizard understanding user context</p>
+                        <p>✓ Agents executing financial transactions autonomously</p>
+                        <p>✓ End-to-end workflow from login to AI-generated insights</p>
+                    </div>
+
+                    <p style="margin-top: 30px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
+                        Demonstrating: AI Wizard + Autonomous Agents + Financial Services expertise
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 7: Simple Super - AI Wizard Video -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">AI Wizard</span>
+                    <h2>Investment Allocation Guidance</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/simple-super/video_2-wizard.webp" alt="AI Wizard Demo">
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Slide 8: Simple Super - Autonomous Agents Video -->
+            <section>
+                <div class="center-container">
+                    <span class="badge orange">AI Agents</span>
+                    <h2>Chatbot and Execution</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/simple-super/video_6-agents.webp" alt="Autonomous Agents Demo">
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Slide 9: Simple Super - Trading Using Agents -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Trading</span>
+                    <h2>Trading View</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/simple-super/video_3-trade.webp" alt="Trading Demo">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Simple Super - Real Time Report View -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Real-Time Reporting</span>
+                    <h2>Real Time Report View</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/simple-super/video_4-report.webp" alt="Report View">
+                    </div>
+
+                    <p class="video-caption">Real-time portfolio performance dashboard</p>
+                </div>
+            </section>
+
+            <!-- Slide 11: Simple Super - Real Time Generated Reports -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Real-Time Reporting</span>
+                    <h2>Real Time Generated Reports</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/simple-super/video_5-gen-report.webp" alt="AI-Generated Insights">
+                    </div>
+
+                    <p class="video-caption">AI-powered automated report generation with actionable insights</p>
+                </div>
+            </section>
+
+            <!-- Slide 12: Case Study 2 - Chartis Context -->
+            <section>
+                <div class="center-container">
+                    <span class="badge red">Case Study 2</span>
+                    <h2>Chartis</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="context-card">
+                        <h3>Platform Overview</h3>
+                        <p><strong>Client:</strong> UGC gaming fund</p>
+                        <p><strong>Platform:</strong> Financial modelling for investment decisions</p>
+                        <p style="margin-top: 15px;"><strong>You'll See:</strong></p>
+                        <p>✓ Individual deal modelling with scenario analysis</p>
+                        <p>✓ Portfolio consolidation for Investment Committee</p>
+                        <p>✓ Distribution waterfall calculations</p>
+                    </div>
+
+                    <p style="margin-top: 30px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
+                        Demonstrating: Financial modelling + Investment workflow automation + Funds domain knowledge
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 13: Chartis - Map View -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">Deal Modelling</span>
+                    <h2>CRM: Map View</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/chartis/user_journey_part1 - map view.webp" alt="Map View Demo">
+                    </div>
+
+                    <p class="video-caption">Comprehensive view of all investment opportunities</p>
+                </div>
+            </section>
+
+            <!-- Slide 14: Chartis - Individual Model -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">Deal Modelling</span>
+                    <h2>Investment: Individual Model</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="playbacks/chartis/user_journey_part2 - individual model.webp"
+                            alt="Individual Model Demo">
+                    </div>
+
+                    <p class="video-caption">Investment-grade modelling for acquisition decisions</p>
+                </div>
+            </section>
+
+            <!-- Slide 15: Chartis - Distribution Waterfall -->
+            <section>
+                <div class="center-container">
+                    <span class="badge orange">Portfolio View</span>
+                    <h2>Portfolio View: Scenario Distribution</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container" style="max-width: 800px;">
+                        <iframe src="https://www.loom.com/embed/c5022650ba134885badfe9f19771dc2d" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <p class="video-caption">Automated investor/fund distribution calculations</p>
+                    <p style="margin-top: 10px; font-size: 0.65em; color: var(--furthr-grey); font-style: italic;">
+                        * This video was non-agentically developed (via Loom)
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 16: Additional Capabilities -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Additional Systems</span>
+                    <h2>Other Built Systems</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="stat-grid two" style="margin-top: 30px;">
+                        <div class="stat-box">
+                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">RFP
+                                Automation</h4>
+                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> AI-powered
+                                platform that automates government RFP responses using LLMs and custom knowledge bases
+                            </p>
+                            <p style="font-size: 0.7em;"><strong>Impact:</strong> 40 hours → 10 minutes (99% efficiency
+                                gain)</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">Stablecoin
+                                Routing</h4>
+                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> Payment
+                                routing engine optimizing across 50+ gateway integrations for best execution</p>
+                            <p style="font-size: 0.7em;"><strong>Impact:</strong> Optimal execution engine reducing
+                                transaction costs by 15%</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">Grant
+                                Evaluation</h4>
+                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> AI system
+                                that scores grant applications against custom criteria using NLP</p>
+                            <p style="font-size: 0.7em;"><strong>Impact:</strong> 100 applications evaluated in 5
+                                minutes (80% signal improvement)</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">Capital
+                                Allocator</h4>
+                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> Blockchain
+                                product using verifiable credentials for access-controlled financial products</p>
+                            <p style="font-size: 0.7em;"><strong>Impact:</strong> EVM-compatible compliance layer
+                                enabling regulated DeFi access</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 25px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
+                        Able to provide real time demo upon request.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 17: Closing -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Summary</span>
+                    <h2>What You've Seen</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="checklist">
+                        <div class="checklist-item">
+                            <span class="check">✓</span>
+                            <span>AI agents with contextual understanding</span>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check">✓</span>
+                            <span>Autonomous execution without human intervention</span>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check">✓</span>
+                            <span>Financial modelling platforms in production</span>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check">✓</span>
+                            <span>Real clients using these systems daily</span>
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check">✓</span>
+                            <span>Intersection of technical capability + commercial expertise</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 50px;">
+                        <h1 style="font-size: 2.5em; color: var(--furthr-primary);">Thank You</h1>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1200,
+            height: 700,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
+        });
+    </script>
+</body>
+
+</html>
