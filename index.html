@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Capabilities in Action - Agentic Systems + Commercial Expertise</title>
+    <title>Capabilities in Action - Program Manager, AI Help Experience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <style>
         :root {
-            /* Furthr Brand Colors */
-            --furthr-primary: #6366F1;
-            --furthr-primary-dark: #4F46E5;
-            --furthr-secondary: #8B5CF6;
-            --furthr-accent: #EC4899;
-            --furthr-navy: #1E293B;
-            --furthr-dark: #0F172A;
-            --furthr-grey: #64748B;
-            --furthr-light-grey: #E2E8F0;
-            --furthr-off-white: #F8FAFC;
-            --furthr-white: #FFFFFF;
-            --furthr-green: #10B981;
-            --furthr-blue: #3B82F6;
-            --furthr-red: #EF4444;
-            --furthr-orange: #F97316;
+            --canva-purple: #7D2AE7;
+            --canva-purple-deep: #6420FF;
+            --canva-teal: #00C4CC;
+            --canva-navy: #1E1B4B;
+            --canva-dark: #0F172A;
+            --canva-text: #1E1B4B;
+            --canva-text-secondary: #64748B;
+            --canva-border: #E8E5F0;
+            --canva-bg: #F8F7FF;
+            --canva-card: #FFFFFF;
+            --canva-green: #10B981;
+            --canva-blue: #3B82F6;
+            --canva-red: #EF4444;
+            --canva-orange: #F97316;
+
+            --grad: linear-gradient(135deg, var(--canva-purple) 0%, var(--canva-teal) 100%);
+            --grad-soft: linear-gradient(135deg, rgba(125, 42, 231, 0.08) 0%, rgba(0, 196, 204, 0.08) 100%);
+            --shadow-card: 0 2px 16px rgba(125, 42, 231, 0.06);
+            --shadow-card-hover: 0 8px 32px rgba(125, 42, 231, 0.12);
         }
 
         * {
@@ -34,12 +39,12 @@
         }
 
         body {
-            background: var(--furthr-off-white);
+            background: var(--canva-bg);
         }
 
         .reveal {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--furthr-off-white);
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--canva-bg);
         }
 
         .reveal .slides section {
@@ -55,38 +60,38 @@
         .reveal h2,
         .reveal h3,
         .reveal h4 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'DM Sans', sans-serif;
             font-weight: 700;
             text-align: center !important;
         }
 
         .reveal h1 {
-            color: var(--furthr-navy);
+            color: var(--canva-navy);
             font-size: 2.3em;
             margin-bottom: 0.3em;
             line-height: 1.2;
         }
 
         .reveal h2 {
-            color: var(--furthr-primary);
+            color: var(--canva-purple);
             font-size: 1.5em;
             margin-bottom: 0.3em;
         }
 
         .reveal h3 {
-            color: var(--furthr-navy);
+            color: var(--canva-navy);
             font-size: 1em;
             font-weight: 600;
         }
 
         .reveal h4 {
-            color: var(--furthr-navy);
+            color: var(--canva-navy);
             font-size: 0.85em;
             font-weight: 600;
         }
 
         .reveal p {
-            color: var(--furthr-navy);
+            color: var(--canva-text);
             line-height: 1.6;
             font-size: 0.85em;
             text-align: center;
@@ -112,11 +117,11 @@
             top: 8px;
             width: 8px;
             height: 8px;
-            background: var(--furthr-primary);
+            background: var(--grad);
             border-radius: 50%;
         }
 
-        /* Centered containers */
+        /* ── Centered containers ───────────────────────────────── */
         .center-container {
             text-align: center;
             display: flex;
@@ -126,10 +131,17 @@
             max-width: 1100px;
         }
 
-        /* Badge */
+        /* ── Canva Logo ────────────────────────────────────────── */
+        .canva-logo {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* ── Badge ─────────────────────────────────────────────── */
         .badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--furthr-primary) 0%, var(--furthr-primary-dark) 100%);
+            background: var(--grad);
             color: white;
             padding: 6px 20px;
             border-radius: 30px;
@@ -141,35 +153,85 @@
         }
 
         .badge.green {
-            background: linear-gradient(135deg, var(--furthr-green) 0%, #059669 100%);
+            background: linear-gradient(135deg, var(--canva-green) 0%, #059669 100%);
         }
 
         .badge.blue {
-            background: linear-gradient(135deg, var(--furthr-blue) 0%, #2563EB 100%);
+            background: linear-gradient(135deg, var(--canva-blue) 0%, #2563EB 100%);
         }
 
         .badge.red {
-            background: linear-gradient(135deg, var(--furthr-red) 0%, #DC2626 100%);
+            background: linear-gradient(135deg, var(--canva-red) 0%, #DC2626 100%);
         }
 
         .badge.orange {
-            background: linear-gradient(135deg, var(--furthr-orange) 0%, #EA580C 100%);
+            background: linear-gradient(135deg, var(--canva-orange) 0%, #EA580C 100%);
         }
 
         .badge.purple {
-            background: linear-gradient(135deg, var(--furthr-secondary) 0%, #7C3AED 100%);
+            background: linear-gradient(135deg, var(--canva-purple) 0%, var(--canva-purple-deep) 100%);
         }
 
-        /* Accent Bar */
+        /* ── Accent Bar ────────────────────────────────────────── */
         .accent-bar {
             height: 3px;
-            background: linear-gradient(90deg, var(--furthr-primary) 0%, var(--furthr-secondary) 100%);
+            background: var(--grad);
             margin: 15px auto 20px;
             width: 80px;
             border-radius: 2px;
         }
 
-        /* Stat Grid */
+        /* ── Card base ───────────────────────────────────────── */
+        .card {
+            background: var(--canva-card);
+            border-radius: 16px;
+            border: 1px solid var(--canva-border);
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--grad);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(125, 42, 231, 0.06) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        .card.accent-top::before {
+            opacity: 1;
+        }
+
+        /* ── Stat Grid ─────────────────────────────────────────── */
         .stat-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -190,18 +252,14 @@
         }
 
         .stat-box {
-            background: white;
             padding: 22px 18px;
-            border-radius: 16px;
             text-align: center;
-            border: 1px solid var(--furthr-light-grey);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
         }
 
         .stat-box .value {
             font-size: 2.2em;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--furthr-primary) 0%, var(--furthr-secondary) 100%);
+            background: var(--grad);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -210,22 +268,18 @@
 
         .stat-box .label {
             font-size: 0.75em;
-            color: var(--furthr-grey);
+            color: var(--canva-text-secondary);
             font-weight: 500;
         }
 
-        /* Feature Card */
+        /* ── Feature Card ──────────────────────────────────────── */
         .feature-card {
-            background: white;
-            border-radius: 16px;
             padding: 25px;
-            border: 1px solid var(--furthr-light-grey);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             margin: 12px 0;
         }
 
         .feature-card h3 {
-            color: var(--furthr-primary);
+            color: var(--canva-purple);
             font-size: 0.9em;
             margin-bottom: 10px;
             text-align: left !important;
@@ -233,12 +287,12 @@
 
         .feature-card p {
             font-size: 0.75em;
-            color: var(--furthr-grey);
+            color: var(--canva-text-secondary);
             margin: 0;
             text-align: left !important;
         }
 
-        /* Video Container */
+        /* ── Video Container ───────────────────────────────────── */
         .video-container {
             position: relative;
             width: 100%;
@@ -246,21 +300,16 @@
             margin: 20px auto;
             border-radius: 14px;
             overflow: hidden;
-            background: var(--furthr-dark);
+            background: var(--canva-dark);
             box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
         }
 
         .video-container.highlight {
-            border: 4px solid var(--furthr-primary);
-            box-shadow: 0 0 40px rgba(99, 102, 241, 0.5), 0 10px 35px rgba(0, 0, 0, 0.18);
+            border: 3px solid var(--canva-purple);
+            box-shadow: 0 0 30px rgba(125, 42, 231, 0.25), 0 10px 35px rgba(0, 0, 0, 0.18);
         }
 
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
+        .video-container video,
         .video-container img {
             width: 100%;
             height: auto;
@@ -276,12 +325,12 @@
         .video-caption {
             text-align: center;
             font-size: 0.75em;
-            color: var(--furthr-grey);
+            color: var(--canva-text-secondary);
             margin-top: 12px;
             font-style: italic;
         }
 
-        /* Video Grid */
+        /* ── Video Grid ────────────────────────────────────────── */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -294,17 +343,12 @@
             position: relative;
             border-radius: 12px;
             overflow: hidden;
-            background: var(--furthr-dark);
+            background: var(--canva-dark);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
             aspect-ratio: 16/9;
         }
 
-        .video-grid-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
+        .video-grid-item video,
         .video-grid-item img {
             width: 100%;
             height: 100%;
@@ -324,7 +368,7 @@
             font-weight: 500;
         }
 
-        /* Two Column Layout */
+        /* ── Two Column Layout ─────────────────────────────────── */
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -340,7 +384,7 @@
             align-items: center;
         }
 
-        /* Capability Icon Grid */
+        /* ── Capability Grid ───────────────────────────────────── */
         .capability-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -350,15 +394,24 @@
         }
 
         .capability-item {
-            background: white;
             padding: 22px;
-            border-radius: 12px;
-            border-left: 4px solid var(--furthr-primary);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: none;
+            position: relative;
+        }
+
+        .capability-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--grad);
+            border-radius: 2px 0 0 2px;
         }
 
         .capability-item h4 {
-            color: var(--furthr-navy);
+            color: var(--canva-purple);
             font-size: 0.85em;
             margin-bottom: 10px;
             text-align: left !important;
@@ -366,23 +419,23 @@
 
         .capability-item p {
             font-size: 0.7em;
-            color: var(--furthr-grey);
+            color: var(--canva-text-secondary);
             margin: 0;
             text-align: left !important;
         }
 
-        /* Subtitle */
+        /* ── Subtitle ──────────────────────────────────────────── */
         .subtitle {
             font-size: 0.95em;
-            color: var(--furthr-grey);
+            color: var(--canva-text-secondary);
             font-weight: 400;
             margin-bottom: 25px;
         }
 
-        /* Context Card */
+        /* ── Context Card ──────────────────────────────────────── */
         .context-card {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.06) 100%);
-            border-left: 4px solid var(--furthr-primary);
+            background: var(--grad-soft);
+            border-left: 4px solid var(--canva-purple);
             padding: 25px 28px;
             border-radius: 14px;
             max-width: 850px;
@@ -392,7 +445,7 @@
 
         .context-card h3 {
             text-align: left !important;
-            color: var(--furthr-primary);
+            color: var(--canva-purple);
             font-size: 0.9em;
             margin-bottom: 12px;
         }
@@ -400,16 +453,16 @@
         .context-card p {
             font-size: 0.75em;
             margin: 6px 0;
-            color: var(--furthr-navy);
+            color: var(--canva-text);
             text-align: left !important;
         }
 
         .context-card .highlight {
-            color: var(--furthr-primary);
+            color: var(--canva-purple);
             font-weight: 600;
         }
 
-        /* Skills Section */
+        /* ── Skills Section ────────────────────────────────────── */
         .skills-container {
             max-width: 1000px;
             margin: 20px auto;
@@ -420,7 +473,7 @@
         }
 
         .skills-category h4 {
-            color: var(--furthr-primary);
+            color: var(--canva-purple);
             font-size: 0.9em;
             margin-bottom: 12px;
             text-align: left !important;
@@ -433,90 +486,23 @@
         }
 
         .skill-tag {
-            background: white;
-            border: 1px solid var(--furthr-light-grey);
+            background: var(--canva-card);
+            border: 1px solid var(--canva-border);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.7em;
-            color: var(--furthr-navy);
+            color: var(--canva-text);
             font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 1px 4px rgba(125, 42, 231, 0.04);
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
-        /* Intersection Diagram */
-        .intersection-diagram {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin: 30px auto;
-            max-width: 900px;
+        .skill-tag:hover {
+            border-color: var(--canva-purple);
+            box-shadow: 0 2px 8px rgba(125, 42, 231, 0.1);
         }
 
-        .intersection-circle {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            position: relative;
-        }
-
-        .intersection-circle.agentic {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0.08) 100%);
-            border: 3px solid var(--furthr-primary);
-        }
-
-        .intersection-circle.commercial {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.08) 100%);
-            border: 3px solid var(--furthr-secondary);
-        }
-
-        .intersection-circle h4 {
-            font-size: 0.85em;
-            margin: 0;
-            color: var(--furthr-navy);
-        }
-
-        .intersection-circle p {
-            font-size: 0.65em;
-            margin: 5px 0 0 0;
-        }
-
-        .intersection-plus {
-            font-size: 3em;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--furthr-primary) 0%, var(--furthr-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: white;
-            padding: 28px;
-            border-radius: 16px;
-            border: 1px solid var(--furthr-light-grey);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            max-width: 650px;
-            margin: 25px auto;
-        }
-
-        .contact-section p {
-            font-size: 0.8em;
-            margin: 10px 0;
-        }
-
-        .contact-section .email {
-            color: var(--furthr-primary);
-            font-weight: 600;
-        }
-
-        /* Checklist */
+        /* ── Checklist ─────────────────────────────────────────── */
         .checklist {
             text-align: left;
             max-width: 750px;
@@ -528,45 +514,372 @@
             align-items: flex-start;
             margin-bottom: 12px;
             font-size: 0.8em;
-            color: var(--furthr-navy);
+            color: var(--canva-text);
         }
 
         .checklist-item .check {
-            color: var(--furthr-green);
+            color: var(--canva-green);
             font-weight: 700;
             margin-right: 12px;
             font-size: 1.1em;
         }
 
-        /* Highlight Box */
+        /* ── Highlight Box ─────────────────────────────────────── */
         .highlight-box {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
-            border: 2px solid var(--furthr-primary);
+            background: var(--grad-soft);
+            border: 2px solid rgba(125, 42, 231, 0.2);
             border-radius: 16px;
             padding: 25px 30px;
             max-width: 900px;
             margin: 20px auto;
+            position: relative;
+            overflow: hidden;
         }
 
         .highlight-box p {
             font-size: 0.8em;
             margin: 8px 0;
-            color: var(--furthr-navy);
+            color: var(--canva-text);
         }
 
         .highlight-box strong {
-            color: var(--furthr-primary);
+            color: var(--canva-purple);
         }
 
-        /* Slide Numbers */
+        /* ── Contact Section ───────────────────────────────────── */
+        .contact-section {
+            padding: 28px;
+            max-width: 650px;
+            margin: 25px auto;
+        }
+
+        .contact-section p {
+            font-size: 0.8em;
+            margin: 10px 0;
+        }
+
+        .contact-section .email {
+            color: var(--canva-purple);
+            font-weight: 600;
+        }
+
+        /* ── How I Work Steps ──────────────────────────────────── */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 1000px;
+            margin: 25px auto;
+            width: 100%;
+        }
+
+        .process-step {
+            padding: 24px 18px;
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step .step-number {
+            font-size: 2em;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .process-step h4 {
+            color: var(--canva-purple);
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 0.65em;
+            color: var(--canva-text-secondary);
+            margin: 0;
+        }
+
+        /* ── Case Study Layout ─────────────────────────────────── */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 950px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .case-study-left {
+            text-align: left;
+        }
+
+        .case-study-left .cs-label {
+            font-size: 0.65em;
+            font-weight: 700;
+            color: var(--canva-purple);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .case-study-left .cs-text {
+            font-size: 0.75em;
+            color: var(--canva-text);
+            margin: 0 0 16px 0;
+            text-align: left !important;
+            line-height: 1.5;
+        }
+
+        .case-study-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .outcome-card {
+            padding: 16px 20px;
+            text-align: left;
+        }
+
+        .outcome-card .outcome-value {
+            font-size: 1.4em;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .outcome-card .outcome-label {
+            font-size: 0.65em;
+            color: var(--canva-text-secondary);
+            margin-top: 4px;
+        }
+
+        /* ── Examples List ─────────────────────────────────────── */
+        .examples-list {
+            max-width: 850px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .example-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+            padding: 18px 24px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .example-row h4 {
+            text-align: left !important;
+            color: var(--canva-purple);
+            font-size: 0.8em;
+            margin: 0;
+        }
+
+        .example-row p {
+            text-align: left !important;
+            font-size: 0.72em;
+            color: var(--canva-text-secondary);
+            margin: 0;
+        }
+
+        /* ── Canva Fit Grid ────────────────────────────────────── */
+        .canva-fit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 950px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .canva-fit-item {
+            padding: 20px 22px;
+            text-align: left;
+            position: relative;
+        }
+
+        .canva-fit-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--grad);
+            border-radius: 2px 0 0 2px;
+        }
+
+        .canva-fit-item .fit-label {
+            font-size: 0.65em;
+            font-weight: 700;
+            color: var(--canva-teal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .canva-fit-item h4 {
+            color: var(--canva-purple);
+            font-size: 0.8em;
+            margin-bottom: 6px;
+            text-align: left !important;
+        }
+
+        .canva-fit-item p {
+            font-size: 0.68em;
+            color: var(--canva-text-secondary);
+            margin: 0;
+            text-align: left !important;
+        }
+
+        /* ── Spotlight Card (Aceternity-inspired) ─────────────── */
+        .spotlight-card {
+            position: relative;
+            background: var(--canva-dark);
+            border-radius: 20px;
+            padding: 40px 44px;
+            max-width: 900px;
+            margin: 25px auto;
+            overflow: hidden;
+            border: 1px solid rgba(125, 42, 231, 0.2);
+        }
+
+        .spotlight-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(125, 42, 231, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 196, 204, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .spotlight-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(125, 42, 231, 0.5), rgba(0, 196, 204, 0.5), transparent);
+        }
+
+        .spotlight-card h3 {
+            color: white;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            text-align: left !important;
+            position: relative;
+        }
+
+        .spotlight-card .spot-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .spotlight-card .spot-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .spotlight-card .spot-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(125, 42, 231, 0.2), rgba(0, 196, 204, 0.2));
+            border: 1px solid rgba(125, 42, 231, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.85em;
+        }
+
+        .spotlight-card .spot-text h4 {
+            color: white;
+            font-size: 0.8em;
+            margin: 0 0 4px 0;
+            text-align: left !important;
+        }
+
+        .spotlight-card .spot-text p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.7em;
+            margin: 0;
+            text-align: left !important;
+        }
+
+        .spotlight-card .spot-badge {
+            display: inline-block;
+            background: var(--grad);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.65em;
+            font-weight: 600;
+            margin-top: 18px;
+            position: relative;
+        }
+
+        /* ── Spotlight Card Light Variant ──────────────────────── */
+        .spotlight-card.light {
+            background: var(--canva-card);
+            border: 1px solid var(--canva-border);
+        }
+
+        .spotlight-card.light::before {
+            background: radial-gradient(circle at 30% 20%, rgba(125, 42, 231, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 196, 204, 0.03) 0%, transparent 50%);
+        }
+
+        .spotlight-card.light::after {
+            background: linear-gradient(90deg, transparent, rgba(125, 42, 231, 0.3), rgba(0, 196, 204, 0.3), transparent);
+        }
+
+        .spotlight-card.light h3 {
+            color: var(--canva-navy);
+        }
+
+        .spotlight-card.light .spot-icon {
+            background: var(--grad-soft);
+            border: 1px solid var(--canva-border);
+            color: var(--canva-purple);
+            font-weight: 700;
+        }
+
+        .spotlight-card.light .spot-text h4 {
+            color: var(--canva-navy);
+        }
+
+        .spotlight-card.light .spot-text p {
+            color: var(--canva-text-secondary);
+        }
+
+        /* ── Appendix Divider ──────────────────────────────────── */
+        .appendix-divider h1 {
+            font-size: 2.5em;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── Slide Numbers ─────────────────────────────────────── */
         .reveal .slide-number {
             font-size: 0.6em;
-            color: #000000;
+            color: var(--canva-purple);
             background: transparent;
-            opacity: 0.9;
+            opacity: 0.6;
         }
 
-        /* Responsive */
+        /* ── Responsive ────────────────────────────────────────── */
         @media (max-width: 768px) {
             .reveal .slides section {
                 padding: 20px 30px;
@@ -578,7 +891,9 @@
                 grid-template-columns: 1fr;
             }
 
-            .two-col {
+            .two-col,
+            .case-study-grid,
+            .canva-fit-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -586,14 +901,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .intersection-diagram {
-                flex-direction: column;
-                gap: 20px;
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .intersection-circle {
-                width: 160px;
-                height: 160px;
+            .example-row {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -603,219 +916,399 @@
     <div class="reveal">
         <div class="slides">
 
-            <!-- Slide 1: Title -->
+            <!-- ═══════════════════════════════════════════════════════
+                 MAIN DECK (Slides 1-7)
+                 ═══════════════════════════════════════════════════════ -->
+
+            <!-- Slide 1: Who I Am -->
             <section>
                 <div class="center-container">
-                    <span class="badge">Portfolio Showcase</span>
-                    <h1>Capabilities in Action</h1>
-                    <h2>Agentic Systems + Commercial Expertise</h2>
+                    <svg class="canva-logo" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="#7D2AE7" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r0)" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r1)" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r2)" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r3)" />
+                        <defs>
+                            <radialGradient id="logo_r0" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(40.96 28.44) rotate(-45.8069) scale(24.1006 16.0169)">
+                                <stop stop-color="#6420FF" />
+                                <stop offset="1" stop-color="#6420FF" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="logo_r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(1.92 17.08) rotate(5.08826) scale(46.9048 37.3842)">
+                                <stop offset="0.25" stop-color="#00C4CC" />
+                                <stop offset="1" stop-color="#00C4CC" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="logo_r2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(34.14 25.64) rotate(-38.8493) scale(30.226 20.6676)">
+                                <stop stop-color="#6420FF" />
+                                <stop offset="1" stop-color="#6420FF" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="logo_r3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(2.28 25.64) rotate(-26.1243) scale(34.8837 23.8524)">
+                                <stop stop-color="#6420FF" />
+                                <stop offset="1" stop-color="#6420FF" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <span class="badge purple">Program Manager &middot; AI Help Experience</span>
+                    <h1>Understanding Problems, Building What Works</h1>
+                    <h2>Operator &middot; Builder &middot; Systems Thinker</h2>
                     <div class="accent-bar"></div>
-                    <p class="subtitle">Live demonstrations from real production systems</p>
+                    <p class="subtitle">I dig into how things work, find what's broken, and build systems that actually
+                        fix it</p>
                 </div>
             </section>
 
-            <!-- Slide 2: The Intersection -->
+            <!-- Slide 2: How I Work -->
             <section>
                 <div class="center-container">
-                    <span class="badge purple">The Sweet Spot</span>
-                    <h2>What Makes This Different</h2>
+                    <span class="badge green">Approach</span>
+                    <h2>How I Work</h2>
                     <div class="accent-bar"></div>
 
-                    <div class="intersection-diagram">
-                        <div class="intersection-circle agentic">
-                            <h4>Agentic AI</h4>
-                            <p>Autonomous systems<br>Context-aware agents<br>Real-time execution</p>
+                    <div class="process-steps">
+                        <div class="process-step card accent-top">
+                            <div class="step-number">01</div>
+                            <h4>Find the Chaos</h4>
+                            <p>Map existing workflows, surface friction points, and understand where teams lose time</p>
                         </div>
-                        <div class="intersection-plus">+</div>
-                        <div class="intersection-circle commercial">
-                            <h4>Commercial</h4>
-                            <p>Business strategy<br>Domain expertise<br>Real-world impact</p>
+                        <div class="process-step card accent-top">
+                            <div class="step-number">02</div>
+                            <h4>Wrangle the People</h4>
+                            <p>Get the right stakeholders aligned, build consensus across disciplines, cut through noise
+                            </p>
+                        </div>
+                        <div class="process-step card accent-top">
+                            <div class="step-number">03</div>
+                            <h4>Build the System</h4>
+                            <p>Design operating cadences, delivery frameworks, and reporting structures that stick</p>
+                        </div>
+                        <div class="process-step card accent-top">
+                            <div class="step-number">04</div>
+                            <h4>Automate the Rest</h4>
+                            <p>Deploy AI-enabled automation that reduces manual effort and increases velocity</p>
                         </div>
                     </div>
 
                     <div class="highlight-box">
-                        <p><strong>The Intersection:</strong> Not just building AI systems but solving real business
-                            problems with AI that delivers measurable outcomes.</p>
-                        <p style="margin-top: 15px;"><strong>Result:</strong> Systems that don't just work. They drive
-                            revenue, reduce costs, and transform operations.</p>
+                        <p>Everything starts with the user. Understand their journey, identify where they struggle, then
+                            work backwards to build something that actually solves it.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 3: Core Skills & Background -->
+            <!-- Slide 3: Case Study 1 - Simple Super -->
             <section>
                 <div class="center-container">
-                    <span class="badge blue">Background</span>
-                    <h2>Core Skills & Expertise</h2>
-                    <div class="accent-bar"></div>
-
-                    <div class="skills-container">
-
-                        <div class="skills-category">
-                            <h4>Commercial & Business</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag">Financial Modelling</span>
-                                <span class="skill-tag">Treasury Management</span>
-                                <span class="skill-tag">Product Strategy</span>
-                                <span class="skill-tag">Go-to-Market</span>
-                                <span class="skill-tag">Stakeholder Management</span>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4>Technical AI & Engineering</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag">Agentic AI Systems</span>
-                                <span class="skill-tag">LLM Integration</span>
-                                <span class="skill-tag">Workflow Automation</span>
-                                <span class="skill-tag">Financial Modelling</span>
-                                <span class="skill-tag">POC Development</span>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4>Track Record</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag">$10M+ ARR Fund Platform</span>
-                                <span class="skill-tag">Superannuation Tech</span>
-                                <span class="skill-tag">Stablecoin Infrastructure</span>
-                                <span class="skill-tag">RFP Automation (40hr → 10min)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 20px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
-                        CV has full history. This demonstrates capabilities in action.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Slide 4: What You're About to See -->
-            <section>
-                <div class="center-container">
-                    <span class="badge">Overview</span>
-                    <h2>What You're About to See</h2>
-                    <div class="accent-bar"></div>
-
-                    <div class="stat-grid two" style="margin-top: 30px;">
-                        <div class="stat-box">
-                            <h3 style="color: var(--furthr-primary);">Simple Super</h3>
-                            <p style="margin-top: 18px; font-size: 0.75em;">
-                                <strong>Superannuation Platform</strong><br><br>
-                                Interactive AI Wizard<br>
-                                Autonomous Agents<br>
-                                Complete workflow in 2 minutes
-                            </p>
-                        </div>
-                        <div class="stat-box">
-                            <h3 style="color: var(--furthr-secondary);">Chartis</h3>
-                            <p style="margin-top: 18px; font-size: 0.75em;">
-                                <strong>UGC Gaming Platform</strong><br><br>
-                                Individual Deal Modelling<br>
-                                Portfolio Consolidation<br>
-                                Distribution Waterfall
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="context-card" style="margin-top: 30px;">
-                        <h3>What Makes This Different</h3>
-                        <p>These are <span class="highlight">live production systems</span> with agents
-                            working in real-time.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 5: Agentic Capabilities Overview -->
-            <section>
-                <div class="center-container">
-                    <span class="badge green">Capabilities</span>
-                    <h2>What These Videos Demonstrate</h2>
-                    <div class="accent-bar"></div>
-
-                    <div class="capability-grid">
-                        <div class="capability-item">
-                            <h4>AI Wizard</h4>
-                            <p>Contextual understanding of investment needs. Guides through setups.
-                                Reduces onboarding friction.</p>
-                        </div>
-                        <div class="capability-item">
-                            <h4>Autonomous Agents</h4>
-                            <p>Execute tasks on user's behalf. Drift management, trade execution. Self-directed with
-                                approve parameters,
-                                minimal human intervention.</p>
-                        </div>
-                        <div class="capability-item">
-                            <h4>Financial Modelling Platform</h4>
-                            <p>Investment-grade modelling. Real-time portfolio consolidation. Automated
-                                waterfall calculations.</p>
-                        </div>
-                        <div class="capability-item">
-                            <h4>Production Systems</h4>
-                            <p>These are <strong>production systems</strong> solving real business
-                                problems for real clients.</p>
-                        </div>
-                    </div>
-                    <p style="margin-top: 6px; font-style: italic;">The following videos are captured by Browser Agents
-                    </p>
-
-                </div>
-            </section>
-
-            <!-- Slide 6: Case Study 1 - Simple Super Context -->
-            <section>
-                <div class="center-container">
-                    <span class="badge green">Case Study 1</span>
+                    <span class="badge blue">Case Study 1</span>
                     <h2>Simple Super</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">Investment
+                        Management Platform &middot; <em>Mock name for demo purposes (client owns real name)</em></p>
                     <div class="accent-bar"></div>
 
-                    <div class="context-card">
-                        <h3>Platform Overview</h3>
-                        <p><strong>What:</strong> Superannuation management platform</p>
-                        <p style="margin-top: 15px;"><strong>You'll See:</strong></p>
-                        <p>✓ AI Wizard understanding user context</p>
-                        <p>✓ Agents executing financial transactions autonomously</p>
-                        <p>✓ End-to-end workflow from login to AI-generated insights</p>
+                    <div class="case-study-grid">
+                        <div class="case-study-left">
+                            <div class="cs-label">01 &middot; Found the Chaos</div>
+                            <p class="cs-text">Legacy trading infrastructure with high costs, manual compliance
+                                processes, limited asset universe, and no real-time visibility for members or
+                                administrators.</p>
+
+                            <div class="cs-label">02 &middot; Wrangled the People</div>
+                            <p class="cs-text">Coordinated stakeholders across compliance, operations, and technology.
+                                Aligned the organisation on a future-state vision and built consensus for a
+                                platform-first approach.</p>
+
+                            <div class="cs-label">03 &middot; Built the System</div>
+                            <p class="cs-text">AI-powered wizard for member onboarding, autonomous trading agents,
+                                tokenised asset infrastructure, proactive compliance engine, and 1-click reporting.</p>
+
+                            <div class="cs-label">04 &middot; Automated the Rest</div>
+                            <p class="cs-text">Proactive compliance monitoring, automated settlement, AI-generated
+                                insights and reports. Reduced manual touchpoints across the entire workflow.</p>
+                        </div>
+
+                        <div class="case-study-right">
+                            <div class="outcome-card card"
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-purple);">
+                                <div class="outcome-value">Lower Barriers to entry </div>
+                                <div class="outcome-label">10% of current rates</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-teal);">
+                                <div class="outcome-value">Expanded asset universe</div>
+                                <div class="outcome-label">Tokenised products</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-green);">
+                                <div class="outcome-value">Real-Time</div>
+                                <div class="outcome-label">Settlement and compliance</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-blue);">
+                                <div class="outcome-value">Automated reporting</div>
+                                <div class="outcome-label">1-Click</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Case Study 2 - Gaming Platform -->
+            <section>
+                <div class="center-container">
+                    <span class="badge red">Case Study 2</span>
+                    <h2>Gaming Platform</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">UGC Gaming
+                        Investment Fund</p>
+                    <div class="accent-bar"></div>
+
+                    <div class="case-study-grid">
+                        <div class="case-study-left">
+                            <div class="cs-label">01 &middot; Found the Chaos</div>
+                            <p class="cs-text">Investment decisions driven by spreadsheets, ad-hoc ratings, and gut
+                                feel. No structured framework for evaluating deals or presenting to investors with
+                                confidence.</p>
+
+                            <div class="cs-label">02 &middot; Wrangled the People</div>
+                            <p class="cs-text">Aligned internal investment team and potential investors on a
+                                structured, data-driven approach. Built consensus on evaluation criteria and reporting
+                                standards.</p>
+
+                            <div class="cs-label">03 &middot; Built the System</div>
+                            <p class="cs-text">Individual deal modelling with scenario analysis, portfolio consolidation
+                                for Investment Committee, CRM with geographic pipeline view, and distribution waterfall
+                                calculations.</p>
+
+                            <div class="cs-label">04 &middot; Automated the Rest</div>
+                            <p class="cs-text">Automated waterfall distributions, portfolio roll-ups, and scenario
+                                outputs. Reduced manual modelling effort and gave the team repeatable, auditable
+                                processes.</p>
+                        </div>
+
+                        <div class="case-study-right">
+                            <div class="outcome-card card"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-red);">
+                                <div class="outcome-value" style="font-size: 1.1em;">Investor Confidence</div>
+                                <div class="outcome-label" style="margin-top: 8px;">Demonstrated maturity and
+                                    sophistication of financial decision-making to investors</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-orange);">
+                                <div class="outcome-value" style="font-size: 1.1em;">Systemised</div>
+                                <div class="outcome-label" style="margin-top: 8px;">From spreadsheets and gut feel to
+                                    structured, repeatable investment process</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Additional Examples -->
+            <section>
+                <div class="center-container">
+                    <span class="badge orange">Breadth</span>
+                    <h2>Additional Examples</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="examples-list">
+                        <div class="example-row card accent-top">
+                            <h4>RFP Automation</h4>
+                            <p>Automating RFP responses using LLMs and custom knowledge bases. Reduced 40-hour manual
+                                process to 10 minutes for a good quality first draft, with continuous feedback loops
+                                evolving generic output into reinforced, client-ready proposals.</p>
+                        </div>
+                        <div class="example-row card accent-top">
+                            <h4>Treasury Operations</h4>
+                            <p>Acted as Head of Markets for crypto treasury. Built tools to generate buy/sell signals,
+                                streamlined alert workflows to engage market makers quickly. Delivered sustainable yield
+                                from $30M treasury to support ongoing operational burn.</p>
+                        </div>
+                        <div class="example-row card accent-top">
+                            <h4>Rare Earths Marketplace</h4>
+                            <p>Worked with mining clients, analysis labs, and shipping partners to structure the full
+                                supply chain into a scalable marketplace platform. Coordinated verification, sampling,
+                                off-take agreements, and negotiation workflows.</p>
+                        </div>
+                        <div class="example-row card accent-top">
+                            <h4>Internal Accounting</h4>
+                            <p>Built an accounting app for my own business to replace paid SaaS entirely. Covers chart
+                                of accounts, ledger entries, GST, depreciation, tax returns, and 1-click reporting.</p>
+                        </div>
                     </div>
 
-                    <p style="margin-top: 30px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
-                        Demonstrating: AI Wizard + Autonomous Agents + Financial Services expertise
+                    <p
+                        style="margin-top: 10px; font-size: 0.7em; color: var(--canva-text-secondary); font-style: italic;">
+                        All prototyped or built end-to-end, coordinating internal and external stakeholders
                     </p>
                 </div>
             </section>
 
-            <!-- Slide 7: Simple Super - AI Wizard Video -->
+            <!-- Slide 6: Why I'm the Right Fit -->
             <section>
                 <div class="center-container">
-                    <span class="badge">AI Wizard</span>
+                    <span class="badge purple">The Fit</span>
+                    <h2>Why I'm the Right Fit</h2>
+                    <div class="accent-bar"></div>
+
+                    <div
+                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 20px auto; width: 100%;">
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                Scale Operational Excellence</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>I create and run the operating
+                                    rhythm</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Established operating cadences at
+                                Immutable across product, GTM, treasury, and marketing using JIRA, Confluence, Looker,
+                                BigQuery</p>
+                        </div>
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                Cross-Team Delivery</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>I turn ambiguity into
+                                    execution</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Turned ambiguous scope into
+                                delivery plans at PwC across government, investors, and partners. Same approach as
+                                independent operator</p>
+                        </div>
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                Data, Models &amp; Forecasting</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>I build the models that inform
+                                    decisions</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Financial models at Immutable for
+                                on-chain metrics. IC reporting at CareSuper. Cost modelling and scenario forecasting
+                                across every engagement</p>
+                        </div>
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                AI Automation &amp; Chief Wrangler</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>I spot manual work and automate
+                                    it</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">AI automation across 6+ domains.
+                                Connective tissue at Immutable across product, GTM, and treasury. Find the bottleneck,
+                                unblock it, get it done</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Thank You -->
+            <section>
+                <div class="center-container">
+                    <h1 style="font-size: 2.5em; color: var(--canva-purple);">Thank You</h1>
+                    <div class="accent-bar"></div>
+                    <p class="subtitle">Happy to share more demos and walk through any of these in detail</p>
+
+                    <div class="highlight-box" style="margin-top: 30px; max-width: 600px;">
+                        <p style="text-align: center; margin: 0;"><strong>The Chief Wrangler you're looking
+                                for.</strong></p>
+                        <p
+                            style="text-align: center; margin: 10px 0 0 0; font-size: 0.75em; color: var(--canva-text-secondary);">
+                            I jump where needed, anticipate blockers, and make sure the invisible work gets done.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 APPENDIX — Demo Showcase
+                 ═══════════════════════════════════════════════════════ -->
+
+            <!-- Appendix Divider -->
+            <section>
+                <div class="center-container appendix-divider">
+                    <span class="badge">Appendix</span>
+                    <h1>Demo Showcase</h1>
+                    <div class="accent-bar"></div>
+                    <p class="subtitle">Live system walkthroughs from the case studies above</p>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super Context -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Simple Super</span>
+                    <h2>Platform Overview</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">Investment
+                        Management Platform &middot; <em>Mock name for demo purposes</em></p>
+                    <div class="accent-bar"></div>
+
+                    <div class="spotlight-card light">
+                        <h3>What You'll See</h3>
+                        <div class="spot-row">
+                            <div class="spot-icon">01</div>
+                            <div class="spot-text">
+                                <h4>AI Wizard</h4>
+                                <p>Understanding user context and guiding investment allocation decisions</p>
+                            </div>
+                        </div>
+                        <div class="spot-row">
+                            <div class="spot-icon">02</div>
+                            <div class="spot-text">
+                                <h4>Autonomous Agents</h4>
+                                <p>Executing financial transactions, drift management, and trade operations</p>
+                            </div>
+                        </div>
+                        <div class="spot-row">
+                            <div class="spot-icon">03</div>
+                            <div class="spot-text">
+                                <h4>Real-Time Reporting</h4>
+                                <p>Live dashboards and AI-generated insights with 1-click report generation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 16px; font-size: 0.75em; color: var(--canva-purple); font-weight: 600;">
+                        Videos captured by browser agents (playback may appear slower than real-time)
+                    </p>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super - AI Wizard -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">Simple Super</span>
                     <h2>Investment Allocation Guidance</h2>
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
                         <img src="playbacks/simple-super/video_2-wizard.webp" alt="AI Wizard Demo">
                     </div>
-
                 </div>
             </section>
 
-            <!-- Slide 8: Simple Super - Autonomous Agents Video -->
+            <!-- Appendix: Simple Super - Autonomous Agents -->
             <section>
                 <div class="center-container">
-                    <span class="badge orange">AI Agents</span>
+                    <span class="badge orange">Simple Super</span>
                     <h2>Chatbot and Execution</h2>
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
                         <img src="playbacks/simple-super/video_6-agents.webp" alt="Autonomous Agents Demo">
                     </div>
-
                 </div>
             </section>
 
-            <!-- Slide 9: Simple Super - Trading Using Agents -->
+            <!-- Appendix: Simple Super - Trading -->
             <section>
                 <div class="center-container">
-                    <span class="badge green">Trading</span>
+                    <span class="badge green">Simple Super</span>
                     <h2>Trading View</h2>
                     <div class="accent-bar"></div>
 
@@ -825,10 +1318,10 @@
                 </div>
             </section>
 
-            <!-- Slide 10: Simple Super - Real Time Report View -->
+            <!-- Appendix: Simple Super - Report View -->
             <section>
                 <div class="center-container">
-                    <span class="badge blue">Real-Time Reporting</span>
+                    <span class="badge blue">Simple Super</span>
                     <h2>Real Time Report View</h2>
                     <div class="accent-bar"></div>
 
@@ -840,10 +1333,10 @@
                 </div>
             </section>
 
-            <!-- Slide 11: Simple Super - Real Time Generated Reports -->
+            <!-- Appendix: Simple Super - Generated Reports -->
             <section>
                 <div class="center-container">
-                    <span class="badge blue">Real-Time Reporting</span>
+                    <span class="badge blue">Simple Super</span>
                     <h2>Real Time Generated Reports</h2>
                     <div class="accent-bar"></div>
 
@@ -855,33 +1348,50 @@
                 </div>
             </section>
 
-            <!-- Slide 12: Case Study 2 - Chartis Context -->
+            <!-- Appendix: Gaming Platform Context -->
             <section>
                 <div class="center-container">
-                    <span class="badge red">Case Study 2</span>
-                    <h2>Chartis</h2>
+                    <span class="badge red">Gaming Platform</span>
+                    <h2>Platform Overview</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">Financial
+                        modelling for UGC gaming investment decisions</p>
                     <div class="accent-bar"></div>
 
-                    <div class="context-card">
-                        <h3>Platform Overview</h3>
-                        <p><strong>Client:</strong> UGC gaming fund</p>
-                        <p><strong>Platform:</strong> Financial modelling for investment decisions</p>
-                        <p style="margin-top: 15px;"><strong>You'll See:</strong></p>
-                        <p>✓ Individual deal modelling with scenario analysis</p>
-                        <p>✓ Portfolio consolidation for Investment Committee</p>
-                        <p>✓ Distribution waterfall calculations</p>
+                    <div class="spotlight-card light">
+                        <h3>What You'll See</h3>
+                        <div class="spot-row">
+                            <div class="spot-icon">01</div>
+                            <div class="spot-text">
+                                <h4>CRM Map View</h4>
+                                <p>Geographic pipeline tracking for investment opportunities</p>
+                            </div>
+                        </div>
+                        <div class="spot-row">
+                            <div class="spot-icon">02</div>
+                            <div class="spot-text">
+                                <h4>Individual Deal Modelling</h4>
+                                <p>Data-driven evaluation frameworks for acquisition decisions</p>
+                            </div>
+                        </div>
+                        <div class="spot-row">
+                            <div class="spot-icon">03</div>
+                            <div class="spot-text">
+                                <h4>Scenario Analysis</h4>
+                                <p>Portfolio-level investment decision support with multiple scenarios</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <p style="margin-top: 30px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
-                        Demonstrating: Financial modelling + Investment workflow automation + Funds domain knowledge
+                    <p style="margin-top: 16px; font-size: 0.75em; color: var(--canva-purple); font-weight: 600;">
+                        Videos captured by browser agents (playback may appear slower than real-time)
                     </p>
                 </div>
             </section>
 
-            <!-- Slide 13: Chartis - Map View -->
+            <!-- Appendix: Gaming Platform - Map View -->
             <section>
                 <div class="center-container">
-                    <span class="badge">Deal Modelling</span>
+                    <span class="badge">Gaming Platform</span>
                     <h2>CRM: Map View</h2>
                     <div class="accent-bar"></div>
 
@@ -893,10 +1403,10 @@
                 </div>
             </section>
 
-            <!-- Slide 14: Chartis - Individual Model -->
+            <!-- Appendix: Gaming Platform - Individual Model -->
             <section>
                 <div class="center-container">
-                    <span class="badge">Deal Modelling</span>
+                    <span class="badge">Gaming Platform</span>
                     <h2>Investment: Individual Model</h2>
                     <div class="accent-bar"></div>
 
@@ -909,106 +1419,19 @@
                 </div>
             </section>
 
-            <!-- Slide 15: Chartis - Distribution Waterfall -->
+            <!-- Final Slide -->
             <section>
                 <div class="center-container">
-                    <span class="badge orange">Portfolio View</span>
-                    <h2>Portfolio View: Scenario Distribution</h2>
+                    <h1 style="font-size: 2.2em; color: var(--canva-purple);">More Where This Came From</h1>
                     <div class="accent-bar"></div>
+                    <p class="subtitle">Happy to walk through any of these live or demo additional systems</p>
 
-                    <div class="video-container" style="max-width: 800px;">
-                        <iframe src="https://www.loom.com/embed/c5022650ba134885badfe9f19771dc2d" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-
-                    <p class="video-caption">Automated investor/fund distribution calculations</p>
-                    <p style="margin-top: 10px; font-size: 0.65em; color: var(--furthr-grey); font-style: italic;">
-                        * This video was non-agentically developed (via Loom)
-                    </p>
-                </div>
-            </section>
-
-            <!-- Slide 16: Additional Capabilities -->
-            <section>
-                <div class="center-container">
-                    <span class="badge blue">Additional Systems</span>
-                    <h2>Other Built Systems</h2>
-                    <div class="accent-bar"></div>
-
-                    <div class="stat-grid two" style="margin-top: 30px;">
-                        <div class="stat-box">
-                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">RFP
-                                Automation</h4>
-                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> AI-powered
-                                platform that automates government RFP responses using LLMs and custom knowledge bases
-                            </p>
-                            <p style="font-size: 0.7em;"><strong>Impact:</strong> 40 hours → 10 minutes (99% efficiency
-                                gain)</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">Stablecoin
-                                Routing</h4>
-                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> Payment
-                                routing engine optimizing across 50+ gateway integrations for best execution</p>
-                            <p style="font-size: 0.7em;"><strong>Impact:</strong> Optimal execution engine reducing
-                                transaction costs by 15%</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">Grant
-                                Evaluation</h4>
-                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> AI system
-                                that scores grant applications against custom criteria using NLP</p>
-                            <p style="font-size: 0.7em;"><strong>Impact:</strong> 100 applications evaluated in 5
-                                minutes (80% signal improvement)</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4 style="color: var(--furthr-navy); font-size: 0.85em; margin-bottom: 12px;">Capital
-                                Allocator</h4>
-                            <p style="font-size: 0.7em; margin-bottom: 8px;"><strong>Description:</strong> Blockchain
-                                product using verifiable credentials for access-controlled financial products</p>
-                            <p style="font-size: 0.7em;"><strong>Impact:</strong> EVM-compatible compliance layer
-                                enabling regulated DeFi access</p>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 25px; font-size: 0.7em; color: var(--furthr-grey); font-style: italic;">
-                        Able to provide real time demo upon request.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Slide 17: Closing -->
-            <section>
-                <div class="center-container">
-                    <span class="badge green">Summary</span>
-                    <h2>What You've Seen</h2>
-                    <div class="accent-bar"></div>
-
-                    <div class="checklist">
-                        <div class="checklist-item">
-                            <span class="check">✓</span>
-                            <span>AI agents with contextual understanding</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="check">✓</span>
-                            <span>Autonomous execution without human intervention</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="check">✓</span>
-                            <span>Financial modelling platforms in production</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="check">✓</span>
-                            <span>Real clients using these systems daily</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="check">✓</span>
-                            <span>Intersection of technical capability + commercial expertise</span>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 50px;">
-                        <h1 style="font-size: 2.5em; color: var(--furthr-primary);">Thank You</h1>
+                    <div class="highlight-box" style="margin-top: 30px; max-width: 600px;">
+                        <p style="text-align: center; margin: 0;"><strong>The Chief Wrangler you're looking
+                                for.</strong></p>
+                        <p
+                            style="text-align: center; margin: 10px 0 0 0; font-size: 0.75em; color: var(--canva-text-secondary);">
+                            I jump where needed, anticipate blockers, and make sure the invisible work gets done.</p>
                     </div>
                 </div>
             </section>
