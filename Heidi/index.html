@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression of Interest · Heidi Health · Aman Gadgil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <style>
+        :root {
+            /* ── Heidi official brand colours (from style guide) ── */
+            --h-bark: #211217;
+            /* Bark — primary accent */
+            --h-forest: #194B22;
+            /* Forest — secondary accent */
+            --h-sunlight: #FBF582;
+            /* Sunlight — highlight/CTA accent */
+            --h-sky: #B9CFFF;
+            /* Sky — soft blue */
+
+            /* ── Backgrounds ─────────────────────────────────────── */
+            --h-sand-25: #FCFAF8;
+            /* Lightest background */
+            --h-sand: #F9F4F1;
+            /* Sand 50 — main slide background */
+            --h-sand-100: #F6ECE4;
+            /* Card surfaces */
+            --h-sand-150: #F4E7DD;
+            /* Borders / dividers */
+
+            /* ── Text ─────────────────────────────────────────────── */
+            --h-text: #211217;
+            /* Primary text */
+            --h-text-sec: #755760;
+            /* Secondary text */
+            --h-text-ter: #8A7078;
+            /* Tertiary text */
+            --h-text-inv: #F9F4F1;
+            /* Inverted (on dark) */
+
+            /* ── Semantic ─────────────────────────────────────────── */
+            --h-green: #194B22;
+            /* Forest */
+            --h-amber: #b35a00;
+            /* Warm amber */
+            --h-red: #c0392b;
+            --h-blue: #4a7ab5;
+            /* Derived from Sky */
+
+            /* ── Gradients & shadows ──────────────────────────────── */
+            --grad: linear-gradient(135deg, var(--h-bark) 0%, var(--h-forest) 100%);
+            --grad-soft: linear-gradient(135deg, rgba(33, 18, 23, 0.05) 0%, rgba(25, 75, 34, 0.05) 100%);
+            --shadow-card: 0 2px 16px rgba(33, 18, 23, 0.06);
+            --shadow-card-hover: 0 8px 32px rgba(33, 18, 23, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--h-sand);
+        }
+
+        .reveal {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--h-sand);
+        }
+
+        .reveal .slides section {
+            padding: 40px 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reveal h1,
+        .reveal h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            text-align: center !important;
+        }
+
+        .reveal h3,
+        .reveal h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-align: center !important;
+        }
+
+        .reveal h1 {
+            color: var(--h-text);
+            font-size: 2.3em;
+            margin-bottom: 0.3em;
+            line-height: 1.2;
+        }
+
+        .reveal h2 {
+            color: var(--h-bark);
+            font-size: 1.5em;
+            margin-bottom: 0.3em;
+        }
+
+        .reveal h3 {
+            color: var(--h-text);
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .reveal h4 {
+            color: var(--h-text);
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .reveal p {
+            color: var(--h-text);
+            line-height: 1.6;
+            font-size: 0.85em;
+            text-align: center;
+        }
+
+        .reveal ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .reveal ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 28px;
+            font-size: 0.8em;
+            line-height: 1.4;
+        }
+
+        .reveal ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: var(--grad);
+            border-radius: 50%;
+        }
+
+        /* ── Heidi Logo ────────────────────────────────────────── */
+        .heidi-logo {
+            width: 72px;
+            height: 72px;
+            margin-bottom: 16px;
+        }
+
+        /* ── Centered containers ───────────────────────────────── */
+        .center-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* ── Badge ─────────────────────────────────────────────── */
+        .badge {
+            display: inline-block;
+            background: var(--grad);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.65em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .badge.green {
+            background: linear-gradient(135deg, var(--h-forest) 0%, #0d2e12 100%);
+        }
+
+        .badge.blue {
+            background: linear-gradient(135deg, var(--h-blue) 0%, #2d6080 100%);
+        }
+
+        .badge.red {
+            background: linear-gradient(135deg, var(--h-red) 0%, #922b21 100%);
+        }
+
+        .badge.orange {
+            background: linear-gradient(135deg, var(--h-amber) 0%, #7d3f00 100%);
+        }
+
+        .badge.maroon {
+            background: linear-gradient(135deg, var(--h-bark) 0%, #3d2030 100%);
+        }
+
+        .badge.sunlight {
+            background: var(--h-sunlight);
+            color: var(--h-bark);
+        }
+
+        /* ── Accent Bar ────────────────────────────────────────── */
+        .accent-bar {
+            height: 3px;
+            background: var(--grad);
+            margin: 15px auto 20px;
+            width: 80px;
+            border-radius: 2px;
+        }
+
+        /* ── Card base ───────────────────────────────────────── */
+        .card {
+            background: var(--h-sand-25);
+            border-radius: 16px;
+            border: 1px solid var(--h-sand-150);
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--grad);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(33, 18, 23, 0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        .card.accent-top::before {
+            opacity: 1;
+        }
+
+        /* ── Stat Grid ─────────────────────────────────────────── */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 25px auto;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .stat-grid.two {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 750px;
+        }
+
+        .stat-grid.four {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 1100px;
+        }
+
+        .stat-box {
+            padding: 22px 18px;
+            text-align: center;
+        }
+
+        .stat-box .value {
+            font-size: 2.2em;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-box .label {
+            font-size: 0.75em;
+            color: var(--h-text-sec);
+            font-weight: 500;
+        }
+
+        /* ── Feature Card ──────────────────────────────────────── */
+        .feature-card {
+            padding: 25px;
+            margin: 12px 0;
+        }
+
+        .feature-card h3 {
+            color: var(--h-bark);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-align: left !important;
+        }
+
+        .feature-card p {
+            font-size: 0.75em;
+            color: var(--h-text-sec);
+            margin: 0;
+            text-align: left !important;
+        }
+
+        /* ── Video Container ───────────────────────────────────── */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 950px;
+            margin: 20px auto;
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--h-bark);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-container.highlight {
+            border: 3px solid var(--h-bark);
+            box-shadow: 0 0 30px rgba(33, 18, 23, 0.22), 0 10px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-container video,
+        .video-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+
+        .video-caption {
+            text-align: center;
+            font-size: 0.75em;
+            color: var(--h-text-sec);
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        /* ── Video Grid ────────────────────────────────────────── */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .video-grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--h-bark);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            aspect-ratio: 16/9;
+        }
+
+        .video-grid-item video,
+        .video-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-grid-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(33, 18, 23, 0.88);
+            color: white;
+            font-size: 0.6em;
+            padding: 8px 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* ── Two Column Layout ─────────────────────────────────── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── Capability Grid ───────────────────────────────────── */
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            max-width: 950px;
+            margin: 25px auto;
+        }
+
+        .capability-item {
+            padding: 22px;
+            border-left: none;
+            position: relative;
+        }
+
+        .capability-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--grad);
+            border-radius: 2px 0 0 2px;
+        }
+
+        .capability-item h4 {
+            color: var(--h-bark);
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            text-align: left !important;
+        }
+
+        .capability-item p {
+            font-size: 0.7em;
+            color: var(--h-text-sec);
+            margin: 0;
+            text-align: left !important;
+        }
+
+        /* ── Subtitle ──────────────────────────────────────────── */
+        .subtitle {
+            font-size: 0.95em;
+            color: var(--h-text-sec);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        /* ── Context Card ──────────────────────────────────────── */
+        .context-card {
+            background: var(--grad-soft);
+            border-left: 4px solid var(--h-bark);
+            padding: 25px 28px;
+            border-radius: 14px;
+            max-width: 850px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .context-card h3 {
+            text-align: left !important;
+            color: var(--h-bark);
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+
+        .context-card p {
+            font-size: 0.75em;
+            margin: 6px 0;
+            color: var(--h-text);
+            text-align: left !important;
+        }
+
+        .context-card .highlight {
+            color: var(--h-bark);
+            font-weight: 600;
+        }
+
+        /* ── Checklist ─────────────────────────────────────────── */
+        .checklist {
+            text-align: left;
+            max-width: 750px;
+            margin: 20px auto;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 0.8em;
+            color: var(--h-text);
+        }
+
+        .checklist-item .check {
+            color: var(--h-green);
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 1.1em;
+        }
+
+        /* ── Highlight Box ─────────────────────────────────────── */
+        .highlight-box {
+            background: var(--grad-soft);
+            border: 2px solid rgba(33, 18, 23, 0.15);
+            border-radius: 16px;
+            padding: 25px 30px;
+            max-width: 900px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box p {
+            font-size: 0.8em;
+            margin: 8px 0;
+            color: var(--h-text);
+        }
+
+        .highlight-box strong {
+            color: var(--h-bark);
+        }
+
+        /* ── Contact Section ───────────────────────────────────── */
+        .contact-section {
+            padding: 28px;
+            max-width: 650px;
+            margin: 25px auto;
+        }
+
+        .contact-section p {
+            font-size: 0.8em;
+            margin: 10px 0;
+        }
+
+        .contact-section .email {
+            color: var(--h-bark);
+            font-weight: 600;
+        }
+
+        /* ── Process Steps ─────────────────────────────────────── */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 1000px;
+            margin: 25px auto;
+            width: 100%;
+        }
+
+        .process-step {
+            padding: 24px 18px;
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step .step-number {
+            font-size: 2em;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .process-step h4 {
+            color: var(--h-bark);
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 0.65em;
+            color: var(--h-text-sec);
+            margin: 0;
+        }
+
+        /* ── Case Study Layout ─────────────────────────────────── */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 950px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .case-study-left {
+            text-align: left;
+        }
+
+        .case-study-left .cs-label {
+            font-size: 0.65em;
+            font-weight: 700;
+            color: var(--h-bark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .case-study-left .cs-text {
+            font-size: 0.75em;
+            color: var(--h-text);
+            margin: 0 0 16px 0;
+            text-align: left !important;
+            line-height: 1.5;
+        }
+
+        .case-study-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .outcome-card {
+            padding: 16px 20px;
+            text-align: left;
+        }
+
+        .outcome-card .outcome-value {
+            font-size: 1.4em;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .outcome-card .outcome-label {
+            font-size: 0.65em;
+            color: var(--h-text-sec);
+            margin-top: 4px;
+        }
+
+        /* ── Examples List ─────────────────────────────────────── */
+        .examples-list {
+            max-width: 850px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .example-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+            padding: 18px 24px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .example-row h4 {
+            text-align: left !important;
+            color: var(--h-bark);
+            font-size: 0.8em;
+            margin: 0;
+        }
+
+        .example-row p {
+            text-align: left !important;
+            font-size: 0.72em;
+            color: var(--h-text-sec);
+            margin: 0;
+        }
+
+        /* ── Spotlight Card ────────────────────────────────────── */
+        .spotlight-card {
+            position: relative;
+            background: var(--h-bark);
+            border-radius: 20px;
+            padding: 40px 44px;
+            max-width: 900px;
+            margin: 25px auto;
+            overflow: hidden;
+            border: 1px solid rgba(33, 18, 23, 0.3);
+        }
+
+        .spotlight-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(40, 3, 15, 0.5) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(25, 75, 34, 0.3) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .spotlight-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(33, 18, 23, 0.6), rgba(25, 75, 34, 0.6), transparent);
+        }
+
+        .spotlight-card h3 {
+            color: white;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            text-align: left !important;
+            position: relative;
+        }
+
+        .spotlight-card .spot-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .spotlight-card .spot-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .spotlight-card .spot-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(33, 18, 23, 0.4), rgba(25, 75, 34, 0.3));
+            border: 1px solid rgba(33, 18, 23, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.85em;
+        }
+
+        .spotlight-card .spot-text h4 {
+            color: white;
+            font-size: 0.8em;
+            margin: 0 0 4px 0;
+            text-align: left !important;
+        }
+
+        .spotlight-card .spot-text p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.7em;
+            margin: 0;
+            text-align: left !important;
+        }
+
+        .spotlight-card .spot-badge {
+            display: inline-block;
+            background: var(--grad);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.65em;
+            font-weight: 600;
+            margin-top: 18px;
+            position: relative;
+        }
+
+        /* ── Spotlight Card Light Variant ──────────────────────── */
+        .spotlight-card.light {
+            background: var(--h-sand-25);
+            border: 1px solid var(--h-sand-150);
+        }
+
+        .spotlight-card.light::before {
+            background: radial-gradient(circle at 30% 20%, rgba(40, 3, 15, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(45, 107, 71, 0.03) 0%, transparent 50%);
+        }
+
+        .spotlight-card.light::after {
+            background: linear-gradient(90deg, transparent, rgba(33, 18, 23, 0.2), rgba(45, 107, 71, 0.2), transparent);
+        }
+
+        .spotlight-card.light h3 {
+            color: var(--h-text);
+        }
+
+        .spotlight-card.light .spot-icon {
+            background: var(--grad-soft);
+            border: 1px solid var(--h-sand-150);
+            color: var(--h-bark);
+            font-weight: 700;
+        }
+
+        .spotlight-card.light .spot-text h4 {
+            color: var(--h-text);
+        }
+
+        .spotlight-card.light .spot-text p {
+            color: var(--h-text-sec);
+        }
+
+        /* ── Placeholder Indicator ─────────────────────────────── */
+        .placeholder-note {
+            font-size: 0.6em;
+            color: var(--h-amber);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* ── Appendix Divider ──────────────────────────────────── */
+        .appendix-divider h1 {
+            font-size: 2.5em;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── Slide Numbers ─────────────────────────────────────── */
+        .reveal .slide-number {
+            font-size: 0.6em;
+            color: var(--h-bark);
+            background: transparent;
+            opacity: 0.6;
+        }
+
+        /* ── Responsive ────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .reveal .slides section {
+                padding: 20px 30px;
+            }
+
+            .stat-grid,
+            .stat-grid.two,
+            .stat-grid.four {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col,
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .example-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ═══════════════════════════════════════════════════════
+                 MAIN DECK (Slides 1-6)
+                 ═══════════════════════════════════════════════════════ -->
+
+            <!-- Slide 1: Title -->
+            <section>
+                <div class="center-container">
+                    <!-- Heidi logo mark — 4-loop Celtic knot, Bark colour -->
+                    <svg class="heidi-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Heidi logo mark">
+                        <defs>
+                            <clipPath id="t_c2">
+                                <path fill-rule="evenodd" d="M-2-2H102V102H-2Z M43 11H57V48H43Z" />
+                            </clipPath>
+                            <clipPath id="t_c4">
+                                <path fill-rule="evenodd" d="M-2-2H102V102H-2Z M51 43H89V57H51Z" />
+                            </clipPath>
+                            <clipPath id="t_c3">
+                                <path fill-rule="evenodd" d="M-2-2H102V102H-2Z M43 51H57V89H43Z" />
+                            </clipPath>
+                            <clipPath id="t_c1">
+                                <path fill-rule="evenodd" d="M-2-2H102V102H-2Z M11 43H48V57H11Z" />
+                            </clipPath>
+                        </defs>
+                        <circle cx="30" cy="30" r="24" stroke="#211217" stroke-width="5.5" clip-path="url(#t_c1)" />
+                        <circle cx="70" cy="30" r="24" stroke="#211217" stroke-width="5.5" clip-path="url(#t_c2)" />
+                        <circle cx="30" cy="70" r="24" stroke="#211217" stroke-width="5.5" clip-path="url(#t_c3)" />
+                        <circle cx="70" cy="70" r="24" stroke="#211217" stroke-width="5.5" clip-path="url(#t_c4)" />
+                        <path d="M50 16.73 A24 24 0 0 1 50 43.27" stroke="#211217" stroke-width="5.5" fill="none" />
+                        <path d="M56.73 50 A24 24 0 0 0 83.27 50" stroke="#211217" stroke-width="5.5" fill="none" />
+                        <path d="M50 56.73 A24 24 0 0 0 50 83.27" stroke="#211217" stroke-width="5.5" fill="none" />
+                        <path d="M16.73 50 A24 24 0 0 1 43.27 50" stroke="#211217" stroke-width="5.5" fill="none" />
+                    </svg>
+                    <span class="badge maroon">Aman Gadgil &middot; CFA &middot; CPA</span>
+                    <h1>Expression of Interest</h1>
+                    <h2>Heidi Health</h2>
+                    <div class="accent-bar"></div>
+                    <p class="subtitle">aman.gadgil@gmail.com &nbsp;&middot;&nbsp; 0404 479 276</p>
+                </div>
+            </section>
+
+            <!-- Slide 2: The Story -->
+            <section>
+                <div class="center-container">
+                    <span class="badge sunlight">The Why</span>
+                    <h2>Why I Am Drawn to Heidi</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="highlight-box" style="max-width: 1000px; width: 100%; margin-bottom: 20px;">
+                        <p style="font-size: 0.82em; line-height: 1.7; margin: 0;">My partner is a dental clinician.
+                            After every shift, she would spend up to 90 minutes finishing her notes, not because she was
+                            slow, but because the tools weren&rsquo;t built for how clinicians actually work. Every note
+                            starts from a blank scratchpad. No templates, no transcription, no patient history in
+                            context, no prompts for what needs to be covered. Just memory, and time.</p>
+                        <p style="font-size: 0.82em; line-height: 1.7; margin: 10px 0 0 0;">That time came either at the
+                            clinic or at home, before any family time. It was the difference between being present or
+                            being drained.</p>
+                        <p style="font-size: 0.82em; line-height: 1.7; margin: 10px 0 0 0;">In 2023, I built a small
+                            clinical
+                            documentation tool for her using AI. She used it and we got that time back.</p>
+                        <p style="font-size: 0.82em; line-height: 1.7; margin: 10px 0 0 0;">That&rsquo;s when it
+                            clicked. This isn&rsquo;t just a tooling problem, it&rsquo;s time, energy, and care. I saw
+                            the impact for one clinician. Heidi is doing this at scale.
+                        <p style="font-size: 0.82em; line-height: 1.7; margin: 10px 0 0 0;">That&rsquo;s why I&rsquo;m
+                            here.</p>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Slide 3: What I Bring -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">The Profile</span>
+                    <h2>What I Bring to Heidi</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="process-steps" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="process-step card accent-top">
+                            <div class="step-number">01</div>
+                            <h4>Built It From the Inside</h4>
+                            <p>Built a clinical documentation tool for a practising dental clinician. I understand the
+                                workflow, the obligation, and the friction from direct observation, not from a brief.
+                            </p>
+                        </div>
+                        <div class="process-step card accent-top">
+                            <div class="step-number">02</div>
+                            <h4>Finance Lens, Builder Velocity</h4>
+                            <p>The combination that&rsquo;s hard to find. Someone who can design the
+                                commercial architecture <em>and</em> ship the system that enforces it. Finance
+                                background means I ask the right questions first. Builder velocity means I don&rsquo;t
+                                wait for answers.</p>
+                        </div>
+                        <div class="process-step card accent-top">
+                            <div class="step-number">03</div>
+                            <h4>Range to Operate at Any Level</h4>
+                            <p>CFA + CPA + AI builder. Investment-grade commercial rigour at PwC on $1B+ projects.
+                                Cross-functional execution at Immutable. The credibility to operate in any
+                                conversation, from product to board level.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <p>The question shifts from <strong>&ldquo;does this work?&rdquo;</strong> to
+                            <strong>&ldquo;how does this scale commercially?&rdquo;</strong> I&rsquo;ve spent 15 years
+                            answering that question and the last two years building the tools to test it.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Case Study 1 - Health Notes Tool -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Case Study 1</span>
+                    <h2>Clinical Notes Tool</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--h-text-sec);">Personal Build &middot;
+                        Clinician Workflow &middot; 1 Hour Saved Per Day</p>
+                    <div class="accent-bar"></div>
+
+                    <div class="case-study-grid">
+                        <div class="case-study-left">
+                            <div class="cs-label">01 &middot; The Problem</div>
+                            <p class="cs-text">Clinicians spend significant time after-hours on documentation, not
+                                because they are slow, but because the tools don&rsquo;t match the workflow. This
+                                is the primary driver of clinician burnout and a problem I observed daily at home.</p>
+
+                            <div class="cs-label">02 &middot; What I Built</div>
+                            <p class="cs-text">A clinical notes tool that reduces post-consultation documentation time.
+                                Built for a real user, with real feedback cycles, not a prototype built against a
+                                hypothetical persona.</p>
+
+                            <div class="cs-label">03 &middot; The Approach</div>
+                            <p class="cs-text">LLM-based transcription and templates, with clinician review before
+                                submission. Privacy-safe by design, configurable templates, audit trail.
+                            </p>
+
+                            <div class="cs-label">04 &middot; The Outcome</div>
+                            <p class="cs-text">At least 1 hour saved per day. Adopted immediately. Built
+                                by someone with skin in the game.</p>
+                        </div>
+
+                        <div class="case-study-right" style="justify-content: center;">
+                            <div class="outcome-card card"
+                                style="min-height: 120px; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(33,18,23,0.03) 0%, rgba(25,75,34,0.03) 100%); border-left: 4px solid var(--h-bark);">
+                                <div class="outcome-value">1hr+</div>
+                                <div class="outcome-label">Saved daily. Post-consultation documentation time cut for a
+                                    practising clinician.</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="min-height: 120px; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(33,18,23,0.03) 0%, rgba(25,75,34,0.03) 100%); border-left: 4px solid var(--h-forest);">
+                                <div class="outcome-value" style="padding-bottom: 4px;">Huge Impact</div>
+                                <div class="outcome-label">Less admin means a more present clinician. Better notes mean
+                                    better continuity of care. The patient feels it too.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Case Study 2 - Simple Super -->
+            <section>
+                <div class="center-container">
+                    <span class="badge orange">Case Study 2</span>
+                    <h2>Simple Super</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--h-text-sec);">AI-Powered Investment
+                        Platform &middot; Mock name, client owns &middot; The same commercial questions required to
+                        scale</p>
+                    <div class="accent-bar"></div>
+
+                    <div class="case-study-grid">
+                        <div class="case-study-left">
+                            <div class="cs-label">01 &middot; The Thesis</div>
+                            <p class="cs-text">Trading platform built for a world where AI agents execute on behalf of
+                                users. Blockchain infrastructure makes this viable: on-chain data, verifiable reasoning,
+                                and execution costs at 10% of the cheapest retail product.</p>
+
+                            <div class="cs-label">02 &middot; The Strategic Question</div>
+                            <p class="cs-text">Which AI capabilities to build, and at what cost? Mapped the vectors:
+                                chatbot, compliance engine, guidance, and advisory. Each carries a different cost
+                                structure, monetisation logic, and regulatory implication (robo-adviser licence, FSC).
+                            </p>
+
+                            <div class="cs-label">03 &middot; The Framework</div>
+                            <p class="cs-text">Evaluated every AI vector against cost-to-serve, value capture (CAC,
+                                marketing, direct monetisation), and regulatory requirements. Designed a phased
+                                approach: build all functionality, then assess what the market values and what
+                                regulation permits.</p>
+
+                            <div class="cs-label">04 &middot; The Architecture</div>
+                            <p class="cs-text">Tokenised assets expand the investable universe. On-chain data is
+                                transparent and agent-readable by design. Lower execution costs enable usage volumes
+                                that traditional infrastructure cannot serve.</p>
+                        </div>
+
+                        <div class="case-study-right">
+                            <div class="outcome-card card"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(33,18,23,0.03) 0%, rgba(25,75,34,0.03) 100%); border-left: 4px solid var(--h-amber);">
+                                <div class="outcome-value" style="font-size: 1.1em;">10&times;</div>
+                                <div class="outcome-label" style="margin-top: 8px;">Trading cost reduction vs cheapest
+                                    retail. Lower costs drive higher volume and make agentic use cases commercially
+                                    viable.</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(33,18,23,0.03) 0%, rgba(25,75,34,0.03) 100%); border-left: 4px solid var(--h-bark);">
+                                <div class="outcome-value" style="font-size: 1.1em;">Agent-Ready</div>
+                                <div class="outcome-label" style="margin-top: 8px;">Designed for a world where AI agents
+                                    execute trades, verify reasoning on-chain, and optimise portfolios autonomously.
+                                </div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(33,18,23,0.03) 0%, rgba(25,75,34,0.03) 100%); border-left: 4px solid var(--h-forest);">
+                                <div class="outcome-value" style="font-size: 1.1em; padding-bottom: 4px;">AI Strategy
+                                </div>
+                                <div class="outcome-label" style="margin-top: 8px;">Framework to evaluate which AI
+                                    vectors create enough value to justify cost and regulatory complexity.</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(33,18,23,0.03) 0%, rgba(25,75,34,0.03) 100%); border-left: 4px solid var(--h-blue);">
+                                <div class="outcome-value" style="font-size: 1.1em;">Tokenised Universe</div>
+                                <div class="outcome-label" style="margin-top: 8px;">Expanded asset classes and on-chain
+                                    data give agents the information layer they need to reason and execute.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: The Ask -->
+            <section>
+                <div class="center-container">
+                    <h2>Let&rsquo;s Talk</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="highlight-box"
+                        style="max-width: 1000px; width: 100%; background: var(--grad-soft); border-left: 4px solid var(--h-bark);">
+                        <p style="font-size: 0.9em; margin: 0; text-align: center;">Excited by the mission. I&rsquo;d
+                            love to connect and explore where I fit.</p>
+                        <p style="margin: 10px 0 0 0; font-size: 0.75em; text-align: center; color: var(--h-text-sec);">
+                            aman.gadgil@gmail.com &nbsp;&middot;&nbsp; 0404 479 276</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 APPENDIX: Demo Showcase
+                 ═══════════════════════════════════════════════════════ -->
+
+            <!-- Appendix Divider -->
+            <section>
+                <div class="center-container appendix-divider">
+                    <span class="badge">Appendix</span>
+                    <h1>Demo Showcase</h1>
+                    <div class="accent-bar"></div>
+                    <p class="subtitle">Clinical Notes Tool &middot; Simple Super finance platform</p>
+                </div>
+            </section>
+
+            <!-- Appendix: Health Notes - Workflow -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Health Notes</span>
+                    <h2>Clinical Health Notes</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--h-text-sec);">Personal Build &middot;
+                        2023 &middot; <em>Mock patient data used throughout demo</em></p>
+                    <div class="accent-bar"></div>
+
+                    <div
+                        style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 24px; max-width: 1000px; width: 100%; margin: 0 auto; align-items: start;">
+
+                        <div class="spotlight-card light" style="margin: 0;">
+                            <div class="spot-row">
+                                <div class="spot-icon">01</div>
+                                <div class="spot-text">
+                                    <h4>Pre-Visit Brief</h4>
+                                    <p>Open patient, tap pre-visit summary. Key history, recent treatments, medications,
+                                        allergies, and last-visit notes surfaced instantly.</p>
+                                </div>
+                            </div>
+                            <div class="spot-row">
+                                <div class="spot-icon">02</div>
+                                <div class="spot-text">
+                                    <h4>Capture</h4>
+                                    <p>Record the consultation or paste notes into the scratchpad. Free-form clinical
+                                        language, no structured input required.</p>
+                                </div>
+                            </div>
+                            <div class="spot-row">
+                                <div class="spot-icon">03</div>
+                                <div class="spot-text">
+                                    <h4>Summarise &amp; Submit</h4>
+                                    <p>Recording and notes are transcribed and structured. Clinician reviews, edits if
+                                        needed, and submits. Full audit trail maintained.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div
+                                style="position: relative; padding-bottom: 62.5%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-card-hover);">
+                                <iframe src="https://www.loom.com/embed/6fccbcb6935a404a82f43545b8f07e86"
+                                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super Context -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Simple Super</span>
+                    <h2>Platform Overview</h2>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--h-text-sec);">Investment
+                        Management Platform &middot; <em>Mock name - client owns</em></p>
+                    <div class="accent-bar"></div>
+
+                    <div class="spotlight-card light">
+                        <h3 style="margin-bottom: 20px;">Agentic Platform in Action</h3>
+                        <div class="spot-row">
+                            <div class="spot-icon">01</div>
+                            <div class="spot-text">
+                                <h4>Agentic Trading Infrastructure</h4>
+                                <p>Blockchain execution at 10% of retail trading rates, enabling the usage volumes that
+                                    agent-driven strategies require and making the cost-to-serve viable</p>
+                            </div>
+                        </div>
+                        <div class="spot-row">
+                            <div class="spot-icon">02</div>
+                            <div class="spot-text">
+                                <h4>AI Vector Assessment</h4>
+                                <p>Evaluating chatbot, compliance, guidance, and advisory capabilities against
+                                    cost-to-serve, value capture potential, and FSC/robo-adviser regulatory requirements
+                                </p>
+                            </div>
+                        </div>
+                        <div class="spot-row">
+                            <div class="spot-icon">03</div>
+                            <div class="spot-text">
+                                <h4>On-Chain Data Foundation</h4>
+                                <p>Tokenised assets and transparent on-chain data giving agents the information layer
+                                    they need to reason, verify, and execute autonomously</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 16px; font-size: 0.75em; color: var(--h-bark); font-weight: 600;">
+                        Videos captured by browser agents (playback may appear slower than real-time)
+                    </p>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super - AI Wizard -->
+            <section>
+                <div class="center-container">
+                    <span class="badge">Simple Super</span>
+                    <h2>Investment Allocation Guidance</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="../playbacks/simple-super/video_2-wizard.webp" alt="AI Wizard Demo">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super - Autonomous Agents -->
+            <section>
+                <div class="center-container">
+                    <span class="badge orange">Simple Super</span>
+                    <h2>Chatbot and Execution</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="../playbacks/simple-super/video_6-agents.webp" alt="Autonomous Agents Demo">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super - Trading -->
+            <section>
+                <div class="center-container">
+                    <span class="badge green">Simple Super</span>
+                    <h2>Trading View</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="../playbacks/simple-super/video_3-trade.webp" alt="Trading Demo">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super - Report View -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Simple Super</span>
+                    <h2>Real Time Report View</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="../playbacks/simple-super/video_4-report.webp" alt="Report View">
+                    </div>
+
+                    <p class="video-caption">Real-time cost and performance visibility: core to any usage-based
+                        commercial model</p>
+                </div>
+            </section>
+
+            <!-- Appendix: Simple Super - Generated Reports -->
+            <section>
+                <div class="center-container">
+                    <span class="badge blue">Simple Super</span>
+                    <h2>Real Time Generated Reports</h2>
+                    <div class="accent-bar"></div>
+
+                    <div class="video-container highlight">
+                        <img src="../playbacks/simple-super/video_5-gen-report.webp" alt="AI-Generated Insights">
+                    </div>
+
+                    <p class="video-caption">Automated insights delivery at scale, eliminating the admin cost of manual
+                        reporting</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1200,
+            height: 700,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
+        });
+    </script>
+</body>
+
+</html>

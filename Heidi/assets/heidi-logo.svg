@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Heidi logo mark — 4-loop Celtic knot
+  Reproduced from Heidi Style Guide (Bark colour, transparent background)
+  Alternate colours: use class="heidi-mark-light" for Sand on Bark background
+
+  Technical notes:
+    ViewBox: 0 0 100 100
+    4 circles: C1(30,30) C2(70,30) C3(30,70) C4(70,70) r=24
+    Weave: C1 over C2 (top), C2 over C4 (right), C4 over C3 (bottom), C3 over C1 (left)
+    Intersection points: (50,16.73) (50,43.27) (56.73,50) (83.27,50)
+                         (50,56.73) (50,83.27) (16.73,50) (43.27,50)
+-->
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Heidi logo mark">
+  <defs>
+    <!--
+      Clip paths create the "under" gap at each crossing.
+      Each clipPath shows everything EXCEPT the small exclusion rectangle,
+      which sits over the "under" arc at the crossing point.
+      even-odd fill rule: outer bounding rect MINUS inner exclusion rect = clip area.
+    -->
+
+    <!-- C2 is UNDER at top crossing (C1 goes over): clip C2 there -->
+    <clipPath id="hd_clip_c2">
+      <path fill-rule="evenodd" d="M -2 -2 H 102 V 102 H -2 Z  M 43 11 H 57 V 48 H 43 Z"/>
+    </clipPath>
+
+    <!-- C4 is UNDER at right crossing (C2 goes over): clip C4 there -->
+    <clipPath id="hd_clip_c4">
+      <path fill-rule="evenodd" d="M -2 -2 H 102 V 102 H -2 Z  M 51 43 H 89 V 57 H 51 Z"/>
+    </clipPath>
+
+    <!-- C3 is UNDER at bottom crossing (C4 goes over): clip C3 there -->
+    <clipPath id="hd_clip_c3">
+      <path fill-rule="evenodd" d="M -2 -2 H 102 V 102 H -2 Z  M 43 51 H 57 V 89 H 43 Z"/>
+    </clipPath>
+
+    <!-- C1 is UNDER at left crossing (C3 goes over): clip C1 there -->
+    <clipPath id="hd_clip_c1">
+      <path fill-rule="evenodd" d="M -2 -2 H 102 V 102 H -2 Z  M 11 43 H 48 V 57 H 11 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Layer 1: All 4 circles, each clipped at their "under" crossing ── -->
+
+  <!-- C1 (top-left, 30,30): under at left crossing — clip its bottom arc -->
+  <circle cx="30" cy="30" r="24" stroke="#211217" stroke-width="5.5" stroke-linecap="round" clip-path="url(#hd_clip_c1)"/>
+
+  <!-- C2 (top-right, 70,30): under at top crossing — clip its left arc -->
+  <circle cx="70" cy="30" r="24" stroke="#211217" stroke-width="5.5" stroke-linecap="round" clip-path="url(#hd_clip_c2)"/>
+
+  <!-- C3 (bottom-left, 30,70): under at bottom crossing — clip its right arc -->
+  <circle cx="30" cy="70" r="24" stroke="#211217" stroke-width="5.5" stroke-linecap="round" clip-path="url(#hd_clip_c3)"/>
+
+  <!-- C4 (bottom-right, 70,70): under at right crossing — clip its top arc -->
+  <circle cx="70" cy="70" r="24" stroke="#211217" stroke-width="5.5" stroke-linecap="round" clip-path="url(#hd_clip_c4)"/>
+
+  <!-- ── Layer 2: "Over" arcs drawn on top at each crossing ── -->
+
+  <!-- C1 OVER at top crossing: right arc of C1 from (50,16.73) through (54,30) to (50,43.27) — clockwise -->
+  <path d="M 50 16.73 A 24 24 0 0 1 50 43.27" stroke="#211217" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+  <!-- C2 OVER at right crossing: bottom arc of C2 from (56.73,50) through (70,54) to (83.27,50) — counterclockwise -->
+  <path d="M 56.73 50 A 24 24 0 0 0 83.27 50" stroke="#211217" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+  <!-- C4 OVER at bottom crossing: left arc of C4 from (50,56.73) through (46,70) to (50,83.27) — counterclockwise -->
+  <path d="M 50 56.73 A 24 24 0 0 0 50 83.27" stroke="#211217" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+  <!-- C3 OVER at left crossing: top arc of C3 from (16.73,50) through (30,46) to (43.27,50) — clockwise -->
+  <path d="M 16.73 50 A 24 24 0 0 1 43.27 50" stroke="#211217" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+</svg>
