@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategy · Aman Gadgil</title>
+    <title>Strategy Showcase · Aman Gadgil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,25 +13,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <style>
         :root {
-            /* ── Canva brand colours ── */
-            --c-purple: #7D2AE7;
-            --c-purple-deep: #6420FF;
-            --c-teal: #00C4CC;
-            --c-navy: #1E1B4B;
-            --c-dark: #0F172A;
-            --c-text: #1E1B4B;
-            --c-text-sec: #64748B;
-            --c-text-ter: #8B95A5;
-            --c-border: #E8E5F0;
-            --c-bg: #F8F7FF;
-            --c-card: #FFFFFF;
-            --c-green: #10B981;
-            --c-blue: #3B82F6;
-            --c-red: #EF4444;
-            --c-orange: #F97316;
+            --canva-purple: #7D2AE7;
+            --canva-purple-deep: #6420FF;
+            --canva-teal: #00C4CC;
+            --canva-navy: #1E1B4B;
+            --canva-dark: #0F172A;
+            --canva-text: #1E1B4B;
+            --canva-text-secondary: #64748B;
+            --canva-border: #E8E5F0;
+            --canva-bg: #F8F7FF;
+            --canva-card: #FFFFFF;
+            --canva-green: #10B981;
+            --canva-blue: #3B82F6;
+            --canva-red: #EF4444;
+            --canva-orange: #F97316;
 
-            /* ── Gradients & shadows ──────────────────────────────── */
-            --grad: linear-gradient(135deg, var(--c-purple) 0%, var(--c-teal) 100%);
+            --grad: linear-gradient(135deg, var(--canva-purple) 0%, var(--canva-teal) 100%);
             --grad-soft: linear-gradient(135deg, rgba(125, 42, 231, 0.08) 0%, rgba(0, 196, 204, 0.08) 100%);
             --shadow-card: 0 2px 16px rgba(125, 42, 231, 0.06);
             --shadow-card-hover: 0 8px 32px rgba(125, 42, 231, 0.12);
@@ -42,12 +39,12 @@
         }
 
         body {
-            background: var(--c-bg);
+            background: var(--canva-bg);
         }
 
         .reveal {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--c-bg);
+            background: var(--canva-bg);
         }
 
         .reveal .slides section {
@@ -60,12 +57,7 @@
         }
 
         .reveal h1,
-        .reveal h2 {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            text-align: center !important;
-        }
-
+        .reveal h2,
         .reveal h3,
         .reveal h4 {
             font-family: 'DM Sans', sans-serif;
@@ -74,32 +66,32 @@
         }
 
         .reveal h1 {
-            color: var(--c-navy);
+            color: var(--canva-navy);
             font-size: 2.3em;
             margin-bottom: 0.3em;
             line-height: 1.2;
         }
 
         .reveal h2 {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 1.5em;
             margin-bottom: 0.3em;
         }
 
         .reveal h3 {
-            color: var(--c-navy);
+            color: var(--canva-navy);
             font-size: 1em;
             font-weight: 600;
         }
 
         .reveal h4 {
-            color: var(--c-navy);
+            color: var(--canva-navy);
             font-size: 0.85em;
             font-weight: 600;
         }
 
         .reveal p {
-            color: var(--c-text);
+            color: var(--canva-text);
             line-height: 1.6;
             font-size: 0.85em;
             text-align: center;
@@ -129,13 +121,6 @@
             border-radius: 50%;
         }
 
-        /* ── Canva Logo ────────────────────────────────────────── */
-        .canva-logo {
-            width: 140px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
         /* ── Centered containers ───────────────────────────────── */
         .center-container {
             text-align: center;
@@ -144,6 +129,13 @@
             align-items: center;
             width: 100%;
             max-width: 1100px;
+        }
+
+        /* ── Canva Logo ────────────────────────────────────────── */
+        .canva-logo {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         /* ── Badge ─────────────────────────────────────────────── */
@@ -161,27 +153,23 @@
         }
 
         .badge.green {
-            background: linear-gradient(135deg, var(--c-green) 0%, #059669 100%);
+            background: linear-gradient(135deg, var(--canva-green) 0%, #059669 100%);
         }
 
         .badge.blue {
-            background: linear-gradient(135deg, var(--c-blue) 0%, #2563EB 100%);
+            background: linear-gradient(135deg, var(--canva-blue) 0%, #2563EB 100%);
         }
 
         .badge.red {
-            background: linear-gradient(135deg, var(--c-red) 0%, #DC2626 100%);
+            background: linear-gradient(135deg, var(--canva-red) 0%, #DC2626 100%);
         }
 
         .badge.orange {
-            background: linear-gradient(135deg, var(--c-orange) 0%, #EA580C 100%);
+            background: linear-gradient(135deg, var(--canva-orange) 0%, #EA580C 100%);
         }
 
         .badge.purple {
-            background: linear-gradient(135deg, var(--c-purple) 0%, var(--c-purple-deep) 100%);
-        }
-
-        .badge.teal {
-            background: linear-gradient(135deg, var(--c-teal) 0%, #00A5AD 100%);
+            background: linear-gradient(135deg, var(--canva-purple) 0%, var(--canva-purple-deep) 100%);
         }
 
         /* ── Accent Bar ────────────────────────────────────────── */
@@ -195,9 +183,9 @@
 
         /* ── Card base ───────────────────────────────────────── */
         .card {
-            background: var(--c-card);
+            background: var(--canva-card);
             border-radius: 16px;
-            border: 1px solid var(--c-border);
+            border: 1px solid var(--canva-border);
             box-shadow: var(--shadow-card);
             position: relative;
             overflow: hidden;
@@ -280,7 +268,7 @@
 
         .stat-box .label {
             font-size: 0.75em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             font-weight: 500;
         }
 
@@ -291,7 +279,7 @@
         }
 
         .feature-card h3 {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 0.9em;
             margin-bottom: 10px;
             text-align: left !important;
@@ -299,7 +287,7 @@
 
         .feature-card p {
             font-size: 0.75em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin: 0;
             text-align: left !important;
         }
@@ -312,12 +300,12 @@
             margin: 20px auto;
             border-radius: 14px;
             overflow: hidden;
-            background: var(--c-dark);
+            background: var(--canva-dark);
             box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
         }
 
         .video-container.highlight {
-            border: 3px solid var(--c-purple);
+            border: 3px solid var(--canva-purple);
             box-shadow: 0 0 30px rgba(125, 42, 231, 0.25), 0 10px 35px rgba(0, 0, 0, 0.18);
         }
 
@@ -337,7 +325,7 @@
         .video-caption {
             text-align: center;
             font-size: 0.75em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin-top: 12px;
             font-style: italic;
         }
@@ -355,7 +343,7 @@
             position: relative;
             border-radius: 12px;
             overflow: hidden;
-            background: var(--c-dark);
+            background: var(--canva-dark);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
             aspect-ratio: 16/9;
         }
@@ -423,7 +411,7 @@
         }
 
         .capability-item h4 {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 0.85em;
             margin-bottom: 10px;
             text-align: left !important;
@@ -431,7 +419,7 @@
 
         .capability-item p {
             font-size: 0.7em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin: 0;
             text-align: left !important;
         }
@@ -439,7 +427,7 @@
         /* ── Subtitle ──────────────────────────────────────────── */
         .subtitle {
             font-size: 0.95em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             font-weight: 400;
             margin-bottom: 25px;
         }
@@ -447,7 +435,7 @@
         /* ── Context Card ──────────────────────────────────────── */
         .context-card {
             background: var(--grad-soft);
-            border-left: 4px solid var(--c-purple);
+            border-left: 4px solid var(--canva-purple);
             padding: 25px 28px;
             border-radius: 14px;
             max-width: 850px;
@@ -457,7 +445,7 @@
 
         .context-card h3 {
             text-align: left !important;
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 0.9em;
             margin-bottom: 12px;
         }
@@ -465,13 +453,53 @@
         .context-card p {
             font-size: 0.75em;
             margin: 6px 0;
-            color: var(--c-text);
+            color: var(--canva-text);
             text-align: left !important;
         }
 
         .context-card .highlight {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-weight: 600;
+        }
+
+        /* ── Skills Section ────────────────────────────────────── */
+        .skills-container {
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .skills-category {
+            margin-bottom: 25px;
+        }
+
+        .skills-category h4 {
+            color: var(--canva-purple);
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            text-align: left !important;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--canva-card);
+            border: 1px solid var(--canva-border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            color: var(--canva-text);
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(125, 42, 231, 0.04);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--canva-purple);
+            box-shadow: 0 2px 8px rgba(125, 42, 231, 0.1);
         }
 
         /* ── Checklist ─────────────────────────────────────────── */
@@ -486,11 +514,11 @@
             align-items: flex-start;
             margin-bottom: 12px;
             font-size: 0.8em;
-            color: var(--c-text);
+            color: var(--canva-text);
         }
 
         .checklist-item .check {
-            color: var(--c-green);
+            color: var(--canva-green);
             font-weight: 700;
             margin-right: 12px;
             font-size: 1.1em;
@@ -511,11 +539,11 @@
         .highlight-box p {
             font-size: 0.8em;
             margin: 8px 0;
-            color: var(--c-text);
+            color: var(--canva-text);
         }
 
         .highlight-box strong {
-            color: var(--c-purple);
+            color: var(--canva-purple);
         }
 
         /* ── Contact Section ───────────────────────────────────── */
@@ -531,11 +559,11 @@
         }
 
         .contact-section .email {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-weight: 600;
         }
 
-        /* ── Process Steps ─────────────────────────────────────── */
+        /* ── How I Work Steps ──────────────────────────────────── */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -562,14 +590,14 @@
         }
 
         .process-step h4 {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 0.8em;
             margin-bottom: 8px;
         }
 
         .process-step p {
             font-size: 0.65em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin: 0;
         }
 
@@ -590,7 +618,7 @@
         .case-study-left .cs-label {
             font-size: 0.65em;
             font-weight: 700;
-            color: var(--c-purple);
+            color: var(--canva-purple);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 6px;
@@ -598,7 +626,7 @@
 
         .case-study-left .cs-text {
             font-size: 0.75em;
-            color: var(--c-text);
+            color: var(--canva-text);
             margin: 0 0 16px 0;
             text-align: left !important;
             line-height: 1.5;
@@ -626,7 +654,7 @@
 
         .outcome-card .outcome-label {
             font-size: 0.65em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin-top: 4px;
         }
 
@@ -648,7 +676,7 @@
 
         .example-row h4 {
             text-align: left !important;
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 0.8em;
             margin: 0;
         }
@@ -656,7 +684,7 @@
         .example-row p {
             text-align: left !important;
             font-size: 0.72em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin: 0;
         }
 
@@ -690,14 +718,14 @@
         .canva-fit-item .fit-label {
             font-size: 0.65em;
             font-weight: 700;
-            color: var(--c-teal);
+            color: var(--canva-teal);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 6px;
         }
 
         .canva-fit-item h4 {
-            color: var(--c-purple);
+            color: var(--canva-purple);
             font-size: 0.8em;
             margin-bottom: 6px;
             text-align: left !important;
@@ -705,15 +733,15 @@
 
         .canva-fit-item p {
             font-size: 0.68em;
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
             margin: 0;
             text-align: left !important;
         }
 
-        /* ── Spotlight Card ────────────────────────────────────── */
+        /* ── Spotlight Card (Aceternity-inspired) ─────────────── */
         .spotlight-card {
             position: relative;
-            background: var(--c-dark);
+            background: var(--canva-dark);
             border-radius: 20px;
             padding: 40px 44px;
             max-width: 900px;
@@ -772,7 +800,6 @@
             justify-content: center;
             flex-shrink: 0;
             font-size: 0.85em;
-            color: white;
         }
 
         .spotlight-card .spot-text h4 {
@@ -803,8 +830,8 @@
 
         /* ── Spotlight Card Light Variant ──────────────────────── */
         .spotlight-card.light {
-            background: var(--c-card);
-            border: 1px solid var(--c-border);
+            background: var(--canva-card);
+            border: 1px solid var(--canva-border);
         }
 
         .spotlight-card.light::before {
@@ -817,22 +844,22 @@
         }
 
         .spotlight-card.light h3 {
-            color: var(--c-navy);
+            color: var(--canva-navy);
         }
 
         .spotlight-card.light .spot-icon {
             background: var(--grad-soft);
-            border: 1px solid var(--c-border);
-            color: var(--c-purple);
+            border: 1px solid var(--canva-border);
+            color: var(--canva-purple);
             font-weight: 700;
         }
 
         .spotlight-card.light .spot-text h4 {
-            color: var(--c-navy);
+            color: var(--canva-navy);
         }
 
         .spotlight-card.light .spot-text p {
-            color: var(--c-text-sec);
+            color: var(--canva-text-secondary);
         }
 
         /* ── Appendix Divider ──────────────────────────────────── */
@@ -847,101 +874,27 @@
         /* ── Slide Numbers ─────────────────────────────────────── */
         .reveal .slide-number {
             font-size: 0.6em;
-            color: var(--c-purple);
+            color: var(--canva-purple);
             background: transparent;
             opacity: 0.6;
         }
 
         /* ── Responsive ────────────────────────────────────────── */
-        /* Mobile portrait */
         @media (max-width: 768px) {
             .reveal .slides section {
-                padding: 20px 28px;
-            }
-
-            .reveal h1 {
-                font-size: 2.8em;
-            }
-
-            .reveal h2 {
-                font-size: 2.2em;
-            }
-
-            .reveal h3 {
-                font-size: 1.6em;
-            }
-
-            .reveal h4 {
-                font-size: 1.3em;
-            }
-
-            .reveal p,
-            .reveal ul li {
-                font-size: 1.3em;
-            }
-
-            /* Small text elements - bump up significantly */
-            .subtitle,
-            .video-caption,
-            .outcome-label,
-            .stat-box .label,
-            .feature-card p,
-            .feature-card h3,
-            .process-step p,
-            .process-step h4,
-            .capability-item p,
-            .capability-item h4,
-            .cs-text,
-            .example-row p,
-            .example-row h4,
-            .spotlight-card .spot-text p,
-            .spotlight-card .spot-text h4,
-            .spotlight-card h3,
-            .highlight-box p,
-            .context-card p,
-            .context-card h3,
-            .checklist-item {
-                font-size: 1.15em !important;
-            }
-
-            /* Extra small labels */
-            .cs-label,
-            .video-grid-label,
-            .canva-fit-item .fit-label {
-                font-size: 0.95em !important;
-            }
-
-            /* Badges - bigger */
-            .badge {
-                font-size: 0.85em !important;
-                padding: 8px 20px !important;
-            }
-
-            /* Accent bar */
-            .accent-bar {
-                width: 100px;
-                height: 4px;
-            }
-
-            /* Outcome values - stat numbers */
-            .outcome-value,
-            .stat-box .value,
-            .step-number {
-                font-size: 1.8em !important;
+                padding: 20px 30px;
             }
 
             .stat-grid,
             .stat-grid.two,
             .stat-grid.four {
                 grid-template-columns: 1fr;
-                gap: 16px;
             }
 
             .two-col,
             .case-study-grid,
             .canva-fit-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
             }
 
             .video-grid {
@@ -949,281 +902,11 @@
             }
 
             .process-steps {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .capability-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .example-row {
                 grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .center-container {
-                max-width: 100%;
-            }
-
-            .video-container,
-            .spotlight-card,
-            .highlight-box,
-            .context-card {
-                max-width: 100%;
-            }
-
-            .canva-logo {
-                width: 100px;
-            }
-        }
-
-        /* Tablet */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .reveal .slides section {
-                padding: 30px 40px;
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stat-grid.four {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Ensure images/videos scale properly */
-        .video-container img,
-        .video-container video,
-        .video-grid-item img,
-        .video-grid-item video {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* ── Mobile TOC Drawer ──────────────────────────────────── */
-        .mobile-toc-toggle {
-            display: none;
-            position: fixed;
-            top: 12px;
-            left: 12px;
-            z-index: 1000;
-            background: var(--c-purple);
-            border: none;
-            border-radius: 8px;
-            padding: 10px 12px;
-            cursor: pointer;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .mobile-toc-toggle span {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: white;
-            margin: 4px 0;
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        .mobile-toc-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .mobile-toc-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-toc-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        .mobile-toc-drawer {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: -280px;
-            width: 280px;
-            height: 100vh;
-            background: var(--c-bg);
-            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
-            z-index: 999;
-            transition: left 0.3s ease;
-            overflow-y: auto;
-            padding: 60px 0 20px;
-        }
-
-        .mobile-toc-drawer.open {
-            left: 0;
-        }
-
-        .mobile-toc-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(30, 27, 75, 0.5);
-            z-index: 998;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .mobile-toc-overlay.open {
-            opacity: 1;
-        }
-
-        .toc-header {
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--c-border);
-            font-weight: 700;
-            color: var(--c-purple);
-            font-size: 0.85em;
-        }
-
-        .toc-item {
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--c-border);
-            cursor: pointer;
-            transition: background 0.2s;
-            font-size: 0.8em;
-            color: var(--c-text);
-        }
-
-        .toc-item:hover {
-            background: var(--grad-soft);
-        }
-
-        .toc-item.active {
-            background: var(--grad-soft);
-            color: var(--c-purple);
-            font-weight: 600;
-            border-left: 3px solid var(--c-purple);
-        }
-
-        .toc-section {
-            padding: 12px 20px;
-            font-size: 0.7em;
-            color: var(--c-text-sec);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 8px;
-        }
-
-        /* Show TOC on all screens */
-        .mobile-toc-toggle,
-        .mobile-toc-drawer,
-        .mobile-toc-overlay {
-            display: block !important;
-        }
-
-        .reveal .controls {
-            bottom: 20px !important;
-        }
-
-        /* Mobile overrides */
-        @media (max-width: 768px) {
-            .reveal .controls {
-                bottom: 20px !important;
-            }
-
-            /* Title slide - MUCH bigger on mobile */
-            .reveal .slides section:first-child h1 {
-                font-size: 3.5em !important;
-            }
-
-            .reveal .slides section:first-child h2 {
-                font-size: 2.5em !important;
-            }
-
-            .reveal .slides section:first-child .subtitle {
-                font-size: 1.5em !important;
-            }
-
-            .reveal .slides section:first-child .badge {
-                font-size: 1em !important;
-                padding: 10px 24px !important;
-            }
-
-            .reveal .slides section:first-child .canva-logo {
-                width: 120px !important;
-            }
-
-            /* Slide 2 - Highlight box text bigger */
-            .reveal .slides section:nth-child(2) .highlight-box p {
-                font-size: 1.25em !important;
-                line-height: 1.6 !important;
-            }
-
-            /* Slide 3 - Process step cards bigger */
-            .reveal .slides section:nth-child(3) .process-step h4 {
-                font-size: 1.4em !important;
-            }
-
-            .reveal .slides section:nth-child(3) .process-step p {
-                font-size: 1.2em !important;
-            }
-
-            .reveal .slides section:nth-child(3) .step-number {
-                font-size: 2.2em !important;
-            }
-
-            /* Slides 4 & 5 - Case study labels (01-04) MUCH bigger + align top */
-            .reveal .slides section:nth-child(4),
-            .reveal .slides section:nth-child(5) {
-                justify-content: flex-start !important;
-                padding-top: 60px !important;
-            }
-
-            .reveal .slides section:nth-child(4) .cs-label,
-            .reveal .slides section:nth-child(5) .cs-label {
-                font-size: 1.3em !important;
-            }
-
-            .reveal .slides section:nth-child(4) .cs-text,
-            .reveal .slides section:nth-child(5) .cs-text {
-                font-size: 1.25em !important;
-            }
-
-            .reveal .slides section:nth-child(4) .outcome-value,
-            .reveal .slides section:nth-child(5) .outcome-value {
-                font-size: 2em !important;
-            }
-
-            .reveal .slides section:nth-child(4) .outcome-label,
-            .reveal .slides section:nth-child(5) .outcome-label {
-                font-size: 1.15em !important;
-            }
-
-            /* Slide 6 - Fit grid bigger */
-            .reveal .slides section:nth-child(6) .canva-fit-item h4 {
-                font-size: 1.3em !important;
-            }
-
-            .reveal .slides section:nth-child(6) .canva-fit-item p {
-                font-size: 1.2em !important;
-            }
-
-            /* Slide 7 - Examples bigger */
-            .reveal .slides section:nth-child(7) .example-row h4 {
-                font-size: 1.3em !important;
-            }
-
-            .reveal .slides section:nth-child(7) .example-row p {
-                font-size: 1.15em !important;
-            }
-
-            /* Slide 8 - Let's Talk highlight box bigger */
-            .reveal .slides section:nth-child(8) .highlight-box p {
-                font-size: 1.4em !important;
-            }
-
-            .reveal .slides section:nth-child(8) .highlight-box {
-                padding: 35px 30px !important;
             }
         }
     </style>
@@ -1234,22 +917,57 @@
         <div class="slides">
 
             <!-- ═══════════════════════════════════════════════════════
-                 MAIN DECK
+                 MAIN DECK (Slides 1-7)
                  ═══════════════════════════════════════════════════════ -->
 
-            <!-- Slide 1: Title -->
+            <!-- Slide 1: Who I Am -->
             <section>
                 <div class="center-container">
                     <svg class="canva-logo" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
                             fill="#7D2AE7" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r0)" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r1)" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r2)" />
+                        <path
+                            d="M79.444 17.536C79.308 17.536 79.184 17.624 79.12 17.808C78.3 20.148 77.192 21.54 76.28 21.54C75.756 21.54 75.544 20.956 75.544 20.04C75.544 17.748 76.916 12.888 77.608 10.672C77.688 10.404 77.74 10.164 77.74 9.96C77.74 9.316 77.388 9 76.516 9C75.576 9 74.564 9.368 73.58 11.092C73.24 9.572 72.212 8.908 70.776 8.908C69.116 8.908 67.512 9.976 66.192 11.708C64.872 13.44 63.32 14.008 62.152 13.728C62.992 11.672 63.304 10.136 63.304 8.996C63.304 7.208 62.42 6.128 60.992 6.128C58.82 6.128 57.568 8.2 57.568 10.38C57.568 12.064 58.332 13.796 60.012 14.636C58.604 17.82 56.548 20.7 55.768 20.7C54.76 20.7 54.464 15.768 54.52 12.24C54.556 10.216 54.724 10.112 54.724 9.5C54.724 9.148 54.496 8.908 53.58 8.908C51.444 8.908 50.784 10.716 50.684 12.792C50.652 13.58 50.528 14.364 50.316 15.124C49.424 18.308 47.584 20.724 46.384 20.724C45.828 20.724 45.676 20.168 45.676 19.44C45.676 17.148 46.96 14.284 46.96 11.84C46.96 10.044 46.172 8.908 44.688 8.908C42.94 8.908 40.628 10.988 38.44 14.884C39.16 11.9 39.456 9.012 37.324 9.012C36.86 9.02 36.408 9.136 36 9.356C35.72 9.488 35.548 9.776 35.568 10.084C35.772 13.26 33.008 21.396 30.388 21.396C29.912 21.396 29.68 20.88 29.68 20.048C29.68 17.752 31.048 12.904 31.736 10.684C31.824 10.396 31.872 10.148 31.872 9.932C31.872 9.324 31.496 9.012 30.644 9.012C29.708 9.012 28.692 9.368 27.712 11.092C27.368 9.572 26.34 8.908 24.904 8.908C22.548 8.908 19.916 11.4 18.76 14.648C17.212 18.984 14.092 23.172 9.892 23.172C6.08 23.172 4.068 20 4.068 14.988C4.068 7.752 9.38 1.84 13.32 1.84C15.204 1.84 16.104 3.04 16.104 4.88C16.104 7.108 14.86 8.144 14.86 8.992C14.86 9.252 15.076 9.508 15.504 9.508C17.216 9.508 19.232 7.496 19.232 4.752C19.232 2.008 17.004 0 13.064 0C6.552 0 0 6.552 0 14.948C0 21.628 3.296 25.656 8.996 25.656C12.884 25.656 16.28 22.632 18.112 19.104C18.32 22.028 19.648 23.556 21.672 23.556C23.472 23.556 24.928 22.484 26.04 20.6C26.468 22.572 27.604 23.536 29.08 23.536C30.772 23.536 32.188 22.464 33.536 20.472C33.516 22.036 33.872 23.508 35.228 23.508C35.868 23.508 36.632 23.36 36.768 22.8C38.196 16.896 41.724 12.076 42.804 12.076C43.124 12.076 43.212 12.384 43.212 12.748C43.212 14.352 42.08 17.64 42.08 19.74C42.08 22.008 43.044 23.508 45.036 23.508C47.244 23.508 49.488 20.804 50.984 16.852C51.452 20.544 52.464 23.524 54.048 23.524C55.992 23.524 59.444 19.432 61.536 15.1C62.356 15.204 63.588 15.176 64.772 14.34C64.268 15.616 63.972 17.012 63.972 18.408C63.972 22.428 65.892 23.556 67.544 23.556C69.34 23.556 70.796 22.484 71.912 20.6C72.28 22.3 73.22 23.532 74.948 23.532C77.652 23.532 80 20.768 80 18.5C80 17.9 79.744 17.536 79.444 17.536ZM23.32 21.328C22.228 21.328 21.8 20.228 21.8 18.588C21.8 15.74 23.748 10.984 25.808 10.984C26.708 10.984 27.048 12.044 27.048 13.34C27.048 16.232 25.196 21.328 23.32 21.328ZM60.724 12.828C60.072 12.052 59.836 10.996 59.836 10.056C59.836 8.896 60.26 7.916 60.768 7.916C61.276 7.916 61.432 8.416 61.432 9.112C61.432 10.276 61.016 11.976 60.724 12.828ZM69.192 21.328C68.1 21.328 67.672 20.064 67.672 18.588C67.672 15.84 69.62 10.984 71.696 10.984C72.596 10.984 72.916 12.036 72.916 13.34C72.916 16.232 71.096 21.328 69.192 21.328Z"
+                            fill="url(#logo_r3)" />
+                        <defs>
+                            <radialGradient id="logo_r0" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(40.96 28.44) rotate(-45.8069) scale(24.1006 16.0169)">
+                                <stop stop-color="#6420FF" />
+                                <stop offset="1" stop-color="#6420FF" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="logo_r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(1.92 17.08) rotate(5.08826) scale(46.9048 37.3842)">
+                                <stop offset="0.25" stop-color="#00C4CC" />
+                                <stop offset="1" stop-color="#00C4CC" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="logo_r2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(34.14 25.64) rotate(-38.8493) scale(30.226 20.6676)">
+                                <stop stop-color="#6420FF" />
+                                <stop offset="1" stop-color="#6420FF" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="logo_r3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(2.28 25.64) rotate(-26.1243) scale(34.8837 23.8524)">
+                                <stop stop-color="#6420FF" />
+                                <stop offset="1" stop-color="#6420FF" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
                     </svg>
                     <span class="badge purple">Aman Gadgil &middot; CFA &middot; CPA</span>
                     <h1>Strategy Showcase</h1>
                     <h2>AI Monetisation &middot; Pricing &middot; Economic Systems</h2>
                     <div class="accent-bar"></div>
-                    <p class="subtitle">aman.gadgil@gmail.com &nbsp;&middot;&nbsp; 0404 479 276</p>
+                    <p class="subtitle">15+ years designing pricing frameworks, economic models, and scalable AI systems
+                        across digital platforms, infrastructure, and emerging technologies</p>
                 </div>
             </section>
 
@@ -1264,173 +982,214 @@
                         <div class="process-step card accent-top">
                             <div class="step-number">01</div>
                             <h4>The Cost Reality</h4>
-                            <p>AI features carry real, variable costs: inference, quality loops, infrastructure. Unlike traditional SaaS, cost-to-serve shifts with usage patterns, model improvements, and scale. Any pricing model that ignores this breaks at volume.</p>
+                            <p>AI features carry real, variable costs: inference, quality loops, infrastructure. Unlike
+                                traditional SaaS, cost-to-serve shifts with usage patterns, model improvements, and
+                                scale. Any pricing model that ignores this breaks at volume.</p>
                         </div>
                         <div class="process-step card accent-top">
                             <div class="step-number">02</div>
                             <h4>The Value Disconnect</h4>
-                            <p>Users don't value AI by what it costs to run. They value it by what it helps them achieve. Pricing anchored to inference costs will always feel wrong. Price against outcomes: the workflow saved, the decision improved, the result delivered.</p>
+                            <p>Users don't value AI by what it costs to run. They value it by what it helps them
+                                achieve. Pricing anchored to inference costs will always feel wrong. Price against
+                                outcomes: the workflow saved, the decision improved, the result delivered.</p>
                         </div>
                         <div class="process-step card accent-top">
                             <div class="step-number">03</div>
                             <h4>The Structure Problem</h4>
-                            <p>Credit, usage, tier, subscription: each model carries different trade-offs for adoption, revenue predictability, and competitive positioning. The right structure at launch is often wrong at scale. The framework has to be designed to evolve.</p>
+                            <p>Credit, usage, tier, subscription: each model carries different trade-offs for adoption,
+                                revenue predictability, and competitive positioning. The right structure at launch is
+                                often wrong at scale. The framework has to be designed to evolve.</p>
                         </div>
                         <div class="process-step card accent-top">
                             <div class="step-number">04</div>
                             <h4>The Core Tension</h4>
-                            <p>Generous access drives adoption. Sustainable economics drives the business. Every AI pricing decision is a bet on where that line sits today, and how it moves as the category matures. Getting this right is the whole job.</p>
+                            <p>Generous access drives adoption. Sustainable economics drives the business. Every AI
+                                pricing decision is a bet on where that line sits today, and how it moves as the
+                                category matures. Getting this right is the whole job.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box">
-                        <p>The key insight: <strong>value is captured from user outcomes and workflows, not from underlying model costs.</strong> Design the framework around what users achieve, not what inference costs.</p>
+                        <p>The key insight: <strong>value is captured from user outcomes and workflows, not from
+                                underlying model costs.</strong> Design the framework around what users achieve, not
+                            what inference costs.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 3: What I Bring -->
-            <section>
-                <div class="center-container">
-                    <span class="badge teal">The Approach</span>
-                    <h2>My Framework for AI Pricing</h2>
-                    <div class="accent-bar"></div>
-
-                    <div class="process-steps" style="grid-template-columns: repeat(3, 1fr);">
-                        <div class="process-step card accent-top">
-                            <div class="step-number">01</div>
-                            <h4>Map the Cost Structure</h4>
-                            <p>Understand the full cost base: inference, data sourcing, hosting, security, quality loops. Token usage is often significant—multi-source intelligence workflows and continuous backtesting run on every signal. Variable, hard to predict, and growing.</p>
-                        </div>
-                        <div class="process-step card accent-top">
-                            <div class="step-number">02</div>
-                            <h4>Define Value Capture</h4>
-                            <p>For financial market participants, 5 basis points of outperformance on $100M to $1B AUM is worth millions. The platform needs to price as a rounding error to the client while remaining material to the business.</p>
-                        </div>
-                        <div class="process-step card accent-top">
-                            <div class="step-number">03</div>
-                            <h4>Design for Uncertainty</h4>
-                            <p>Per seat, per agent, per volume: evaluate every model against an AI adoption curve that does not yet exist. This is the same challenge Canva faces—pricing for a future where AI agents may do the work, not humans.</p>
-                        </div>
-                    </div>
-
-                    <div class="highlight-box">
-                        <p>The key insight: <strong>value is captured from user outcomes and workflows, not from underlying model costs.</strong> Design the framework around what users achieve, not what inference costs.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 4: Case Study 1 - Simple Super -->
+            <!-- Slide 3: Case Study 1 - Simple Super -->
             <section>
                 <div class="center-container">
                     <span class="badge blue">Case Study 1</span>
                     <h2>Simple Super</h2>
-                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--c-text-sec);">Agentic Trading Platform &middot; <em>Mock name - client owns</em> &middot; Built for the AI Economy</p>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">Agentic Trading
+                        Platform &middot; <em>Mock name - client owns</em> &middot; Built for the AI Economy</p>
                     <div class="accent-bar"></div>
 
                     <div class="case-study-grid">
                         <div class="case-study-left">
                             <div class="cs-label">01 &middot; The Thesis</div>
-                            <p class="cs-text">Trading platform built for a world where AI agents execute on behalf of users. Blockchain infrastructure makes this viable: on-chain data, verifiable reasoning, and execution costs at 10% of the cheapest retail product.</p>
+                            <p class="cs-text">Trading platform built for a world where AI agents execute on behalf of
+                                users. Blockchain infrastructure makes this viable: on-chain data, verifiable reasoning,
+                                and execution costs at 10% of the cheapest retail product.</p>
 
                             <div class="cs-label">02 &middot; The Strategic Question</div>
-                            <p class="cs-text">Which AI capabilities to build, and at what cost? Mapped the vectors: chatbot, compliance engine, guidance, and advisory. Each carries a different cost structure, monetisation logic, and regulatory implication.</p>
+                            <p class="cs-text">Which AI capabilities to build, and at what cost? Mapped the vectors:
+                                chatbot, compliance engine, guidance, and advisory. Each carries a different cost
+                                structure, monetisation logic, and regulatory implication (robo-adviser licence, FSC).
+                            </p>
 
                             <div class="cs-label">03 &middot; The Framework</div>
-                            <p class="cs-text">Evaluated every AI vector against cost-to-serve, value capture (CAC, marketing, direct monetisation), and regulatory requirements. Designed a phased approach: build all functionality, then assess what the market values.</p>
+                            <p class="cs-text">Evaluated every AI vector against cost-to-serve, value capture (CAC,
+                                marketing, direct monetisation), and regulatory requirements. Designed a phased
+                                approach: build all functionality, then assess what the market values and what
+                                regulation permits.</p>
 
                             <div class="cs-label">04 &middot; The Architecture</div>
-                            <p class="cs-text">Tokenised assets expand the investable universe. On-chain data is transparent and agent-readable by design. Lower execution costs enable usage volumes that traditional infrastructure cannot serve.</p>
+                            <p class="cs-text">Tokenised assets expand the investable universe. On-chain data is
+                                transparent and agent-readable by design. Lower execution costs enable usage volumes
+                                that traditional infrastructure cannot serve.</p>
                         </div>
 
-                        <div class="case-study-right" style="justify-content: center;">
+                        <div class="case-study-right">
                             <div class="outcome-card card"
-                                style="min-height: 120px; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--c-purple);">
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-purple);">
                                 <div class="outcome-value">10×</div>
-                                <div class="outcome-label">Trading cost reduction vs cheapest retail. Lower costs drive higher volume and make agentic use cases commercially viable.</div>
+                                <div class="outcome-label">Trading cost reduction vs cheapest retail. Lower costs drive
+                                    higher volume and make agentic use cases commercially viable.</div>
                             </div>
                             <div class="outcome-card card"
-                                style="min-height: 120px; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--c-teal);">
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-teal);">
                                 <div class="outcome-value">Agent-Ready</div>
-                                <div class="outcome-label">Designed for a world where AI agents execute trades, verify reasoning on-chain, and optimise portfolios autonomously.</div>
+                                <div class="outcome-label">Designed for a world where AI agents execute trades, verify
+                                    reasoning on-chain, and optimise portfolios autonomously.</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-green);">
+                                <div class="outcome-value">AI Strategy</div>
+                                <div class="outcome-label">Framework to evaluate which AI vectors create enough value to
+                                    justify cost and regulatory complexity.</div>
+                            </div>
+                            <div class="outcome-card card"
+                                style="background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-blue);">
+                                <div class="outcome-value">Tokenised Universe</div>
+                                <div class="outcome-label">Expanded asset classes and on-chain data give agents the
+                                    information layer they need to reason and execute.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 5: Case Study 2 - Minerals Marketplace -->
+            <!-- Slide 4: Case Study 2 - Minerals Marketplace -->
             <section>
                 <div class="center-container">
                     <span class="badge orange">Case Study 2</span>
                     <h2>Minerals Marketplace</h2>
-                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--c-text-sec);">AI-Enabled Trading Platform &middot; Pricing a New Category</p>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">AI-Enabled
+                        Trading Platform &middot; Pricing a New Category</p>
                     <div class="accent-bar"></div>
 
                     <div class="case-study-grid">
                         <div class="case-study-left">
                             <div class="cs-label">01 &middot; The Pricing Question</div>
-                            <p class="cs-text">How do you price a platform where agents may do the work, not humans? Per seat, per agent, per volume, per outcome? Defined the commercial model for a financial marketplace where AI adoption is non-linear and future usage patterns are genuinely uncertain.</p>
+                            <p class="cs-text">How do you price a platform where agents may do the work, not humans? Per
+                                seat, per agent, per volume, per outcome? Defined the commercial model for a financial
+                                marketplace where AI adoption is non-linear and future usage patterns are genuinely
+                                uncertain.</p>
 
                             <div class="cs-label">02 &middot; The Cost Structure</div>
-                            <p class="cs-text">Mapped the full cost base: data sourcing, hosting, security, audits, and token usage. Token usage is significant: multi-source intelligence workflows and continuous backtesting run on every signal.</p>
+                            <p class="cs-text">Mapped the full cost base: data sourcing, hosting, security, audits, and
+                                token usage. Token usage is significant: multi-source intelligence workflows and
+                                continuous backtesting run on every signal. Variable, hard to predict, and growing.</p>
 
                             <div class="cs-label">03 &middot; The Value Equation</div>
-                            <p class="cs-text">For financial market participants, 5 basis points of outperformance on $100M to $1B AUM is worth millions. The platform needed to price as a rounding error to the client while remaining material to the business.</p>
+                            <p class="cs-text">For financial market participants, 5 basis points of outperformance on
+                                $100M to $1B AUM is worth millions. The platform needed to price as a rounding error to
+                                the client while remaining material to the business.</p>
 
                             <div class="cs-label">04 &middot; The Commercial Architecture</div>
-                            <p class="cs-text">Evaluated per-seat, per-agent, and volume-based structures against projected AI adoption curves. Designed data access and surfacing patterns to enable agent-driven workflows.</p>
+                            <p class="cs-text">Evaluated per-seat, per-agent, and volume-based structures against
+                                projected AI adoption curves. Designed data access and surfacing patterns to enable
+                                agent-driven workflows: a commercial architecture built for an agent-first future.</p>
                         </div>
 
                         <div class="case-study-right">
                             <div class="outcome-card card"
-                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--c-orange);">
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-orange);">
                                 <div class="outcome-value" style="font-size: 1.1em;">5bp = $M</div>
-                                <div class="outcome-label" style="margin-top: 8px;">Outperformance on $100M to $1B AUM. Priced as a rounding error to the client, material to the platform.</div>
+                                <div class="outcome-label" style="margin-top: 8px;">Outperformance on $100M to $1B AUM.
+                                    Priced as a rounding error to the client, material to the platform.</div>
                             </div>
                             <div class="outcome-card card"
-                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--c-purple);">
-                                <div class="outcome-value" style="font-size: 1.1em; padding-bottom: 4px;">Pricing for Uncertainty</div>
-                                <div class="outcome-label" style="margin-top: 8px;">Per seat, per agent, per volume: evaluated every model against an AI adoption curve that does not yet exist.</div>
+                                style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(125,42,231,0.03) 0%, rgba(0,196,204,0.03) 100%); border-left: 4px solid var(--canva-purple);">
+                                <div class="outcome-value" style="font-size: 1.1em;">Pricing for Uncertainty</div>
+                                <div class="outcome-label" style="margin-top: 8px;">Per seat, per agent, per volume:
+                                    evaluated every model against an AI adoption curve that does not yet exist. Same
+                                    challenge Canva faces.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 6: Why I'm the Right Fit -->
+            <!-- Slide 5: Why I'm the Right Fit -->
             <section>
                 <div class="center-container">
                     <span class="badge purple">The Fit</span>
-                    <h2>Why I'm the Right Fit for Canva</h2>
+                    <h2>Why I'm the Right Fit</h2>
                     <div class="accent-bar"></div>
 
-                    <div class="canva-fit-grid">
-                        <div class="canva-fit-item">
-                            <div class="fit-label">Economic System Design</div>
-                            <h4>Pricing models built from first principles</h4>
-                            <p>Token ecosystem economics at Immutable ($2B ecosystem). Cost architecture for Financial Platforms. Both required designing the commercial framework before the market had an answer—exactly the challenge Canva faces with AI pricing.</p>
+                    <div
+                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 20px auto; width: 100%;">
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                Economic System Design</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>Pricing models built from first
+                                    principles, where no template existed</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Token ecosystem economics at
+                                Immutable ($2B ecosystem). Cost architecture for Financial Platforms. Both required
+                                designing the commercial framework before the market had an answer.</p>
                         </div>
-                        <div class="canva-fit-item">
-                            <div class="fit-label">Structured Thinking in Ambiguity</div>
-                            <h4>Undefined category, commercial framework first</h4>
-                            <p>Tokenomics at Immutable before the category existed. AI feature strategy for an agentic platform before regulatory templates existed. The consistent pattern: enter undefined spaces and drive to actionable commercial decisions.</p>
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                Structured Thinking in Ambiguity</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>Undefined category, commercial
+                                    framework first</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Tokenomics at Immutable before the
+                                category existed. AI feature strategy for an agentic platform before regulatory
+                                templates existed. The consistent pattern: enter undefined spaces and drive to
+                                actionable commercial decisions.</p>
                         </div>
-                        <div class="canva-fit-item">
-                            <div class="fit-label">AI Economics &amp; Cost-to-Serve</div>
-                            <h4>Cost, value, and the gap between them</h4>
-                            <p>Unit economics and cost-to-serve models built across AI platforms: inference costs, usage patterns, scalability dynamics. Free vs paid trade-offs, usage limits, and feature gating evaluated across multiple products.</p>
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                AI Economics &amp; Cost-to-Serve</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>Cost, value, and the gap between
+                                    them</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Unit economics and cost-to-serve
+                                models built across AI platforms: inference costs, usage patterns, scalability dynamics.
+                                Free vs paid trade-offs, usage limits, and feature gating evaluated across multiple
+                                products and pricing structures.</p>
                         </div>
-                        <div class="canva-fit-item">
-                            <div class="fit-label">Cross-Functional Execution</div>
-                            <h4>Strategy that lands, not just strategy that's right</h4>
-                            <p>Investment-grade business cases at PwC for &gt;$1B projects. Cross-org strategy at Immutable across product, GTM, finance, and marketing. CFA + CPA: the financial credibility to be taken seriously in any commercial conversation.</p>
+                        <div class="highlight-box" style="margin: 0; text-align: left;">
+                            <p
+                                style="font-size: 0.6em; color: var(--canva-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; text-align: left;">
+                                Cross-Functional Execution</p>
+                            <p style="margin: 0 0 8px 0; text-align: left;"><strong>Strategy that lands, not just
+                                    strategy that's right</strong></p>
+                            <p style="font-size: 0.7em; margin: 0; text-align: left;">Investment-grade business cases at
+                                PwC for &gt;$1B projects. Cross-org strategy at Immutable across product, GTM, finance,
+                                and marketing. CFA + CPA: the financial credibility to be taken seriously in any
+                                commercial conversation.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 7: Additional Examples -->
+            <!-- Slide 6: Additional Examples -->
             <section>
                 <div class="center-container">
                     <span class="badge blue">More Context</span>
@@ -1440,27 +1199,38 @@
                     <div class="examples-list">
                         <div class="example-row card accent-top">
                             <h4>Gaming Platform</h4>
-                            <p>Commercial decision framework for a UGC gaming investment fund: deal models, scenario analysis, waterfall calculations, and IC-ready reporting. Supported a $5M capital raise by translating complex financial analysis into clear, senior-stakeholder-ready recommendations.</p>
+                            <p>Commercial decision framework for a UGC gaming investment fund: deal models, scenario
+                                analysis, waterfall calculations, and IC-ready reporting. Supported a $5M capital raise
+                                by translating complex financial analysis into clear, senior-stakeholder-ready
+                                recommendations</p>
                         </div>
                         <div class="example-row card accent-top">
                             <h4>RFP Automation Tool</h4>
-                            <p>AI-powered RFP response system using LLMs and custom knowledge bases. Embedded feedback loops to improve output over time while keeping inference costs predictable. Reduced preparation from 40+ hours to minutes.</p>
+                            <p>AI-powered RFP response system using LLMs and custom knowledge bases. Embedded
+                                feedback loops to improve output over time while keeping inference costs predictable.
+                                Reduced preparation from 40+ hours to minutes.</p>
                         </div>
                         <div class="example-row card accent-top">
                             <h4>Internal Accounting System</h4>
-                            <p>Made the build-vs-buy decision by evaluating SaaS unit economics and concluding building was better. Full implementation: chart of accounts, ledger entries, GST, depreciation, tax returns, 1-click reporting.</p>
+                            <p>Made the build-vs-buy decision by evaluating SaaS unit economics and concluding building
+                                was better. Full implementation: chart of accounts, ledger entries, GST, depreciation,
+                                tax returns, 1-click reporting.</p>
                         </div>
                         <div class="example-row card accent-top">
                             <h4>AI Assisted Reader</h4>
-                            <p>Upload a book, sell-side report, financial filing, or technical paper and interrogate it with AI. Ask specific questions, extract key arguments, surface assumptions, or get a structured summary.</p>
+                            <p>Upload a book, sell-side report, financial filing, or technical paper and interrogate it
+                                with AI. Ask specific questions, extract key arguments, surface assumptions, or get a
+                                structured summary.</p>
                         </div>
                     </div>
 
-                    <p style="margin-top: 10px; font-size: 0.7em; color: var(--c-text-sec); font-style: italic;">
-                        All prototyped or built end-to-end, coordinating internal and external stakeholders.
+                    <p
+                        style="margin-top: 10px; font-size: 0.7em; color: var(--canva-text-secondary); font-style: italic;">
+                        All prototyped or built end-to-end, coordinating internal and external stakeholders
                     </p>
                 </div>
             </section>
+
 
             <!-- ═══════════════════════════════════════════════════════
                  APPENDIX: Demo Showcase
@@ -1472,7 +1242,7 @@
                     <span class="badge">Appendix</span>
                     <h1>Demo Showcase</h1>
                     <div class="accent-bar"></div>
-                    <p class="subtitle">Simple Super Platform &middot; AI Trading &amp; Execution</p>
+                    <p class="subtitle">One live system walkthrough · happy to demo others on request</p>
                 </div>
             </section>
 
@@ -1481,35 +1251,40 @@
                 <div class="center-container">
                     <span class="badge green">Simple Super</span>
                     <h2>Platform Overview</h2>
-                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--c-text-sec);">Investment Management Platform &middot; <em>Mock name - client owns</em></p>
+                    <p style="margin-top: -5px; font-size: 0.75em; color: var(--canva-text-secondary);">Investment
+                        Management Platform &middot; <em>Mock name - client owns</em></p>
                     <div class="accent-bar"></div>
 
                     <div class="spotlight-card light">
-                        <h3 style="margin-bottom: 20px;">AI Economy Architecture in Action</h3>
+                        <h3>AI Economy Architecture in Action</h3>
                         <div class="spot-row">
                             <div class="spot-icon">01</div>
                             <div class="spot-text">
                                 <h4>Agentic Trading Infrastructure</h4>
-                                <p>Blockchain execution at 10% of retail rates, enabling the usage volumes that agent-driven strategies require and making the cost-to-serve viable.</p>
+                                <p>Blockchain execution at 10% of retail rates, enabling the usage volumes that
+                                    agent-driven strategies require and making the cost-to-serve viable</p>
                             </div>
                         </div>
                         <div class="spot-row">
                             <div class="spot-icon">02</div>
                             <div class="spot-text">
                                 <h4>AI Vector Assessment</h4>
-                                <p>Evaluating chatbot, compliance, guidance, and advisory capabilities against cost-to-serve, value capture potential, and FSC/robo-adviser regulatory requirements.</p>
+                                <p>Evaluating chatbot, compliance, guidance, and advisory capabilities against
+                                    cost-to-serve, value capture potential, and FSC/robo-adviser regulatory requirements
+                                </p>
                             </div>
                         </div>
                         <div class="spot-row">
                             <div class="spot-icon">03</div>
                             <div class="spot-text">
                                 <h4>On-Chain Data Foundation</h4>
-                                <p>Tokenised assets and transparent on-chain data giving agents the information layer they need to reason, verify, and execute autonomously.</p>
+                                <p>Tokenised assets and transparent on-chain data giving agents the information layer
+                                    they need to reason, verify, and execute autonomously</p>
                             </div>
                         </div>
                     </div>
 
-                    <p style="margin-top: 16px; font-size: 0.75em; color: var(--c-purple); font-weight: 600;">
+                    <p style="margin-top: 16px; font-size: 0.75em; color: var(--canva-purple); font-weight: 600;">
                         Videos captured by browser agents (playback may appear slower than real-time)
                     </p>
                 </div>
@@ -1523,7 +1298,7 @@
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
-                        <img src="_archive/playbacks/simple-super/video_2-wizard.webp" alt="AI Wizard Demo">
+                        <img src="playbacks/simple-super/video_2-wizard.webp" alt="AI Wizard Demo">
                     </div>
                 </div>
             </section>
@@ -1536,7 +1311,7 @@
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
-                        <img src="_archive/playbacks/simple-super/video_6-agents.webp" alt="Autonomous Agents Demo">
+                        <img src="playbacks/simple-super/video_6-agents.webp" alt="Autonomous Agents Demo">
                     </div>
                 </div>
             </section>
@@ -1549,7 +1324,7 @@
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
-                        <img src="_archive/playbacks/simple-super/video_3-trade.webp" alt="Trading Demo">
+                        <img src="playbacks/simple-super/video_3-trade.webp" alt="Trading Demo">
                     </div>
                 </div>
             </section>
@@ -1562,10 +1337,11 @@
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
-                        <img src="_archive/playbacks/simple-super/video_4-report.webp" alt="Report View">
+                        <img src="playbacks/simple-super/video_4-report.webp" alt="Report View">
                     </div>
 
-                    <p class="video-caption">Real-time cost and performance visibility: core to any usage-based commercial model.</p>
+                    <p class="video-caption">Real-time cost and performance visibility: core to any usage-based
+                        commercial model</p>
                 </div>
             </section>
 
@@ -1577,26 +1353,24 @@
                     <div class="accent-bar"></div>
 
                     <div class="video-container highlight">
-                        <img src="_archive/playbacks/simple-super/video_5-gen-report.webp" alt="AI-Generated Insights">
+                        <img src="playbacks/simple-super/video_5-gen-report.webp" alt="AI-Generated Insights">
                     </div>
 
-                    <p class="video-caption">Automated insights delivery at scale, eliminating the admin cost of manual reporting.</p>
+                    <p class="video-caption">Automated insights delivery at scale, eliminating the admin cost of manual
+                        reporting</p>
+                </div>
+            </section>
+
+            <!-- Final Slide -->
+            <section>
+                <div class="center-container">
+                    <h1 style="font-size: 2.5em; color: var(--canva-purple);">Thank You</h1>
+                    <div class="accent-bar"></div>
+                    <p class="subtitle">Happy to walk through any of these in detail</p>
                 </div>
             </section>
 
         </div>
-    </div>
-
-    <!-- Mobile TOC -->
-    <button class="mobile-toc-toggle" aria-label="Table of Contents">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="mobile-toc-overlay"></div>
-    <div class="mobile-toc-drawer">
-        <div class="toc-header">Contents</div>
-        <div id="toc-list"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
@@ -1610,91 +1384,10 @@
             transition: 'slide',
             width: 1200,
             height: 700,
-            margin: 0.04,
-            minScale: 0.15,
-            maxScale: 3.0,
-            responsive: true
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
         });
-
-        // Mobile TOC functionality
-        const tocToggle = document.querySelector('.mobile-toc-toggle');
-        const tocDrawer = document.querySelector('.mobile-toc-drawer');
-        const tocOverlay = document.querySelector('.mobile-toc-overlay');
-        const tocList = document.getElementById('toc-list');
-
-        // Slide titles for TOC
-        const slideTitles = [
-            { section: 'Canva PM Application', slides: [
-                { title: 'Home', index: 0 },
-                { title: 'How I Think About AI Monetisation', index: 1 },
-                { title: 'My Framework for AI Pricing', index: 2 },
-                { title: 'Case Study 1: Simple Super', index: 3 },
-                { title: 'Case Study 2: Minerals Marketplace', index: 4 },
-                { title: "Why I'm the Right Fit", index: 5 },
-                { title: 'Additional Examples', index: 6 },
-            ]},
-            { section: 'Appendix: Demo Showcase', slides: [
-                { title: 'Platform Overview', index: 8 },
-                { title: 'Investment Guidance', index: 9 },
-                { title: 'Chatbot & Execution', index: 10 },
-                { title: 'Trading View', index: 11 },
-                { title: 'Report View', index: 12 },
-                { title: 'Generated Reports', index: 13 },
-            ]}
-        ];
-
-        // Build TOC
-        let activeIndex = 0;
-        slideTitles.forEach(section => {
-            const sectionDiv = document.createElement('div');
-            sectionDiv.className = 'toc-section';
-            sectionDiv.textContent = section.section;
-            tocList.appendChild(sectionDiv);
-
-            section.slides.forEach(slide => {
-                const item = document.createElement('div');
-                item.className = 'toc-item';
-                item.textContent = slide.title;
-                item.dataset.index = slide.index;
-                item.addEventListener('click', () => {
-                    Reveal.slide(slide.index);
-                    closeDrawer();
-                });
-                tocList.appendChild(item);
-            });
-        });
-
-        function updateActiveSlide() {
-            const currentIndex = Reveal.getIndices().h;
-            document.querySelectorAll('.toc-item').forEach(item => {
-                item.classList.toggle('active', parseInt(item.dataset.index) === currentIndex);
-            });
-        }
-
-        function openDrawer() {
-            tocToggle.classList.add('active');
-            tocDrawer.classList.add('open');
-            tocOverlay.classList.add('open');
-        }
-
-        function closeDrawer() {
-            tocToggle.classList.remove('active');
-            tocDrawer.classList.remove('open');
-            tocOverlay.classList.remove('open');
-        }
-
-        tocToggle.addEventListener('click', () => {
-            if (tocDrawer.classList.contains('open')) {
-                closeDrawer();
-            } else {
-                openDrawer();
-            }
-        });
-
-        tocOverlay.addEventListener('click', closeDrawer);
-
-        Reveal.on('slidechanged', updateActiveSlide);
-        Reveal.on('ready', updateActiveSlide);
     </script>
 </body>
 
